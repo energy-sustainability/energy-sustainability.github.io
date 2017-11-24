@@ -21,6 +21,7 @@ The Table of Contents:
     - [#1 Feedforward Nets and Conv Nets](#mlp_convnets)
     - [#2 Recurrent Neural Nets](#rnn_nets)
     - [#3 Embedding spaces](#embeddings)
+    - [#4 High Performance Computing Aspects of Deep Learning] (#HPC) 
 - [Code and Lab Resources](#code)
 - [Papers of interest](#papers)
 
@@ -33,7 +34,7 @@ This is the official web page for the contents of the lectures from the Deep Lea
 <a name='lecturers'></a>
 ### Lecturers
 - Dario Garcia-Gasulla (Coordinator) (BSC, dario.garcia@bsc.es)
-- Marc Casas
+- Marc Casas (BSC, marc.casas@bsc.es)
 - Javier Bejar (UPC-CS, bejar@cs.upc.edu)
 
 
@@ -101,6 +102,12 @@ Embedding spaces (lecturer: Dario Garcia)
 - [Lab guided](embedding-spaces-lab-guided)
 - [Lab autonomous]
 
+<a name='HPC'></a>
+### Lesson 4
+High Performance Computing Aspects of Deep Learning (lecturer: Marc Casas)
+- Theory
+- Lab Guided
+- Lab Autonomius
 
 <a name='code'></a>
 ### Code and Lab Resources
