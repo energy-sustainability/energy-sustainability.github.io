@@ -21,7 +21,7 @@ The Table of Contents:
     - [#1 Feedforward Nets and Conv Nets](#mlp_convnets)
     - [#2 Recurrent Neural Nets](#rnn_nets)
     - [#3 Embedding spaces](#embeddings)
-    - [#4 High Performance Computing Aspects of Deep Learning] (#HPC) 
+    - [#4 High Performance Computing Aspects of Deep Learning](#HPC) 
 - [Code and Lab Resources](#code)
 - [Papers of interest](#papers)
 
