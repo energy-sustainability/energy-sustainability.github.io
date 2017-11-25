@@ -103,9 +103,9 @@ Embedding spaces (lecturer: Dario Garcia)
 - [Lab autonomous]
 
 <a name='HPC'></a>
-### Lesson 4
+#### Lesson 4
 High Performance Computing Aspects of Deep Learning (lecturer: Marc Casas)
-- Theory
+- [Theory](hpc-ai)
 - Lab Guided
 - Lab Autonomius
 
