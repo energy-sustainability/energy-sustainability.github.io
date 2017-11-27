@@ -99,7 +99,7 @@ Embedding spaces (lecturer: Dario Garcia)
 
 - [Theory](emb-space-theory)
 - [Lab guided](embedding-spaces-lab-guided)
-- [Lab autonomous]
+- [Lab autonomous](embedding-spaces-lab-autonomous)
 
 
 <a name='code'></a>
