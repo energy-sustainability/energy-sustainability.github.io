@@ -106,8 +106,8 @@ Embedding spaces (lecturer: Dario Garcia)
 #### Lesson 4
 High Performance Computing Aspects of Deep Learning (lecturer: Marc Casas)
 - [Theory](https://www.bsc.es/sites/default/files/public/bscw2/user/user-attachments/dlcourse_hpcfordl_1.pdf)
-- Lab Guided
-- Lab Autonomous
+- [Lab Guided](https://www.bsc.es/sites/default/files/public/bscw2/user/user-attachments/guidedlab.pdf)
+- [Source Code](https://www.bsc.es/sites/default/files/public/bscw2/user/user-attachments/tensorflow-course.tar_.gz_.txt)
 
 <a name='code'></a>
 ### Code and Lab Resources
