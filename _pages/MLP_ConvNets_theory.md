@@ -2,7 +2,8 @@
 permalink: /mlp-convnets-theory/
 ---
 
-This page contains the theoretical part of the ANN-CNN topic for the Deep Learning course at the Master in Artificial Inteligence of the Universitat Politècnica de Catalunya. 
+This page contains the theoretical part of the ANN-CNN topic for the Deep Learning course at the Master in Artificial Inteligence of the Universitat Politècnica de Catalunya
+The same contents are found in the [following set of slides](http://upc-mai-dl.github.io/files/An introduction to fnn and cnn.pdf).
 
 Table of Contents:
 

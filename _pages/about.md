@@ -60,10 +60,15 @@ The guided laboratory provides working code that can serve as a starting point f
 
 The autonomous laboratory session is intended for students to experiment with Deep Learning methods, and draw their own conclusions. On each autonomous laboratory, a set of example experiments will be detailed, but students are strongly encouraged to define their own experiments based on their own curiosity.
 
+
+<a name='overlap'></a>
+### Overlap with other courses
+For some of the thematic blocks (specially the first one) there is a significant amount of overlap with other courses. However, this course is oriented towards practical aspects of deep learning. This means that theory is not given in thorough detail (as other courses may do), and that a significant amount of autonomous work is expected.
+
 <a name='evaluation'></a>
 ### Course Evaluation
 
-The course is evaluated 50% by theory comprehension and 50% by experimental work. Theory comprehension is measured by an analysis on a paper chosen by the student. The student should read and fully understand the paper, reading as many references as needed for that purpose. A presentation will be done where the student will describe the paper itself, and provide constructive criticism on it. This may include, but is not limited to, answers to questions such as:
+The course is evaluated 25% by theory comprehension and 75% by experimental work. Theory comprehension is measured by an analysis on a paper chosen by the student. The student should read and fully understand the paper, reading as many references as needed for that purpose. A presentation will be done where the student will describe the paper itself, and provide constructive criticism on it. This may include, but is not limited to, answers to questions such as:
 
 - What is the main contribution of the article?
 - How could this paper be extended by more experiments or analysis?
@@ -115,12 +120,13 @@ High Performance Computing Aspects of Deep Learning (lecturer: Marc Casas)
 The codes used in the lab sessions can be downloaded from the following locations:
 - [Lesson 1: Feedforward Neural Nets and Conv Nets](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/1.FNN-CNN)
 - [Lesson 2: Recurrent Neural Networks](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/2.RNN)
+- [Lesson 3: Embedding spaces](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/3.Embeddings)
 
 
 
 <a name='papers'></a>
 ### Papers of Interest
 
-For the evaluation of the theoretical aspects of the course, we offer a list of papers of interest which the student may chose to read and review. These are loosely categorized.
+For the evaluation of the theoretical aspects of the course, we offer a list of papers of interest which the student may chose to read and review. These are loosely categorized. We strongly suggest that the student choose papers not found on that list, according to their own interest. The newer the paper, the best.
 
 [Papers of interests](papers-of-interest/)

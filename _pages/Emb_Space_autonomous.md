@@ -2,7 +2,9 @@
 permalink: /embedding-spaces-lab-autonomous/
 ---
 
-The autonomous laboratory is open for your exploration. Using the basic codes provided in the guided laboratory, students can modify it to run different experiments. You encoirage you to explore whatever experiments you find most interesting. Follows an incomplete list of suggestions that you may or may not consider:
+The autonomous laboratory is open for your exploration. Using the basic codes provided in the guided laboratory, students can modify it to run different experiments. You can also use any framework you wish, train model you can find, or online dataset. In previous seminars, students have used data from sources such as The Lord Of the Rings books, or lyrics from songs. In the end you must submit an 8 pages PDF document (references not included) with your work. Minimum font size of 11. In general, its better to focus in one aspect and to study it thoroughly, than to do small experiments on different topics without going any deep.
+
+We encourage you to explore whatever experiments you find most interesting. Follows an incomplete list of suggestions that you may or may not consider:
 
 # Word Embeddings
 - Consider embeddings obtained from different training corpus
