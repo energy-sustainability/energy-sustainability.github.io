@@ -44,6 +44,26 @@ This is the official web page for the contents of the lectures from the Deep Lea
 
 This course provides an applied approach to Deep Learning. The course is structured in 4 thematic blocks, and each block as 3 parts: theory, guided laboratory and autonomous laboratory.
 
+<a name='calendar'></a>
+### Course Calendar for the Spring 2017-2018 semester
+
+- 22/02 - FNN and CNN theory
+- 01/03 - FNN and CNN guided lab
+- 08/03 - FNN and CNN autonomous lab
+- 15/03 - RNN theory
+- 22/03 - RNN guided lab
+- 05/04 - RNN autonomous lab
+- 12/04 - High Performance aspects theory
+- 19/04 - High Performance aspects guided lab
+- 26/04 - High Performance aspects autonomous lab
+- 10/05 - Embedding spaces theory
+- 17/05 - Embedding spaces guided lab
+- 24/05 - Embedding spaces autonomous lab
+- 31/05 - Presentation of theoretical works
+- 07/06 - Presentation of theoretical works
+- 14/06 - Presentation of theoretical works
+
+
 <a name='theory'></a>
 #### Theory
 
