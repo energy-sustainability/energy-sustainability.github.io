@@ -8,18 +8,19 @@ This session is for exploring the effects of the different elements of
 RNNs using a specific dataset. In this case we are going to extend the Wind
 prediction example that we used in the previous session.
 
-Deliver your report before **December 22th** using the raco.
+Deliver your report before **April 26th** using the raco.
 
 
-In the original example we predicted one step of the future wind (next 15 minutes)
+In the original example we predicted one step of the future PM10 (next hour)
 using a window of previous measurements. We can extend the problem in different
 ways:
 
 ### Complementary variables
 
-In the original experiment we used only the **wind speed** as input data. The
-measurements include also the **air density**, the **temperature** and the
-**presure**.
+In the original experiment we used only the **PM10** as input data. The
+measurements include other eight variables four are measurements, the other
+four correspond to the date of the measure. You can test how these variables affect the
+predictions.
 
 Do the following:
 
@@ -29,14 +30,14 @@ the dropout and the length of the input window.
 
 ### Complementary sites
 
-In the original experiment we predicted the **wind speed** using the data from
+In the original experiment we predicted the **PM10** using the data from
 one site, the dataset includes three additional sites that are geographically
-close (they are in the vertices of a 2 km square). We can leverage the information
-of the *wind speed* from the other sites.
+close. We can leverage the information
+of the *PM10* from the other sites.
 
 Do the following:
 
- * Use the previous architecture (you have now also 4 variables, 4 wind speeds) and study how
+ * Use the previous architecture with the PM10 of all sites and study how
  the MSE changes if you change the size of the units (more/less memory),
 the dropout and the lenth of the input window.
  
@@ -96,6 +97,6 @@ because of *insert reason here* and the results were the same/worse)
 Use statistics and graphics to support your explanations.
 
 
-Deliver your report before **December 22th** using the raco.
+Deliver your report before **April 26th** using the raco.
 
 
