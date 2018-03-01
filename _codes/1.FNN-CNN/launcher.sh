@@ -1,6 +1,6 @@
 #!/bin/bash
 # @ job_name= code_lab1.1
-# @ class = bsc_cs
+# @ class = training
 # @ initialdir= /gpfs/projects/bsc28/MAI-DL/lab1_MNIST/logs
 # @ output= %j.out
 # @ error= %j.err
