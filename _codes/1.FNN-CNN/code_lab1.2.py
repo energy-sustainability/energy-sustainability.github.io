@@ -24,6 +24,14 @@ y_test = np_utils.to_categorical(y_test, 10)
 from keras import backend as K
 #MNIST resolution
 img_rows, img_cols = 28, 28
+
+#Depending on the version of Keras, two different sintaxes are used to specify the ordering
+###Keras 1.X (as in MinoTauro)
+#K.image_dim_ordering == 'tf' or 'theano'
+###Keras 2.X (probably in your local installation)
+#K.image_data_format == 'channels_first' or 'channels_last'
+#
+
 if K.image_data_format() == 'channels_first':
     x_train = x_train.reshape(x_train.shape[0], 1, img_rows, img_cols)
     x_test = x_test.reshape(x_test.shape[0], 1, img_rows, img_cols)
