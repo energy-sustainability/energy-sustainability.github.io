@@ -1,7 +1,7 @@
 #!/bin/bash
 # @ job_name= code_lab1.1
 # @ class = training
-# @ initialdir= /gpfs/projects/bsc28/MAI-DL/lab1_MNIST/logs
+# @ initialdir= /gpfs/home/nctXX/
 # @ output= %j.out
 # @ error= %j.err
 # @ total_tasks= 1
