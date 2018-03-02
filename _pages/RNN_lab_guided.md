@@ -22,7 +22,7 @@ access to current and historical data from different sensors situated across the
 
 
 The dataset with this task has data for 4 sites and includes the
-variables **PM10 (Particulate Matter 10 um (ug/m3))**, **NO (Nitric Oxide  (ug/m3))**,
+variables **PM10 (Particulate Matter 10 um (ug/m3))**, **NO (Nitric Oxide (ug/m3))**,
 **NO2 (Nitrogen Dioxide (ug/m3))**, **O3 (Ozone (ug/m3))** and
 **Wind Speed (m/s)**. The data has additionally for each observation the month,
 the day of the month, the day of the week and the hour.
@@ -68,11 +68,11 @@ computes the regression as output.
 ```javascript
 {
   "data": {
-    "datanames": ["GEltham", "GWesthorne", "BSladeGreen",  "GWoolwich"], # data sites to use, only the first one is used
-    "vars": [0,1,2,3,4,5,6,7,8], # variables to use, only the variable 0 is used
+    "datanames": ["GEltham", "GWesthorne", "BSladeGreen",  "GWoolwich"], # data sites to use, only the first one is used in the example code
+    "vars": [0,1,2,3,4,5,6,7,8], # variables to use, only the variable 0 is used in the example code
     "datasize": 35064, # Training data (4 years)
     "testsize": 8784, # Validation data (1 year)
-    "dataset": 0, # how to generate the data (one variable, one site)
+    "dataset": 0, # how to generate the data (one variable, one site in the example code)
     "lag": 6, # Lag for generating the windows
     "ahead": 1 # how ahead will be the prediction
   },
