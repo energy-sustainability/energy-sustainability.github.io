@@ -36,13 +36,14 @@ The data and the code are in the `\AirQuality` directory. The file `LondonAQ.npz
 contains the data matrices for all four sites. The data is in `npz` numpy format,
 this means that if you load the data from the file you will have an object that
 stores all the data matrices. This object has the attribute `file` that tells
-you the name of the matrices. We are going to use the matrix `BSladeGreen` (Bexley at Slade Green).
+you the name of the matrices. We are going to use the matrix `GEltham` (Greenwich at Eltham).
 
 The code of the example is in the `AirQPrediction.py` file. This code reads the
 matrix of the first site and splits the data in a training set, a validation
 set and a test set. The script has a flag `--verbose` for verbose output, a
-flag `--gpu` for using an implementation for the recurrent layer suitable for gpu
-and a flag `--config`  for the configuration file.
+flag `--gpu` for using an implementation for the recurrent layer suitable for gpu,
+ a flag `--config`  for the configuration file a flag `--best` that records the
+ epoch with the best validation MSE score and `--tboard` that saves a log file for tensorboard.
 
 Only the first variable (**PM10**) is used. The data matrix is obtained
 generating windows of size `lag`+1 moving the window one step at a time. The first
@@ -66,25 +67,37 @@ computes the regression as output.
 
 ```javascript
 {
-  "datasize": 0000000,
-  "testsize": 000000, # Half validation
-  "lag": 0,
-  "neurons": 000,
-  "drop": 0.0,
-  "nlayers": 0,
-  "activation": "relu", # relu, tanh, sigmoid
-  "activation_r": "sigmoid",
-  "rnn": "LSTM", # LSTM, GRU
-  "batch": 0000,
-  "epochs": 00
+  "data": {
+    "datanames": ["GEltham", "GWesthorne", "BSladeGreen",  "GWoolwich"], # data sites to use, only the first one is used
+    "vars": [0,1,2,3,4,5,6,7,8], # variables to use, only the variable 0 is used
+    "datasize": 35064, # Training data (4 years)
+    "testsize": 8784, # Validation data (1 year)
+    "dataset": 0, # how to generate the data (one variable, one site)
+    "lag": 6, # Lag for generating the windows
+    "ahead": 1 # how ahead will be the prediction
+  },
+  "arch": {
+    "neurons": 100, # Neurons in the RNN layers
+    "rnn": "LSTM", # Type of cell LSTM or GRU
+    "drop": 0.0, # Recurrent dropout
+    "nlayers": 2, # Number of layers
+    "activation": "tanh", # Activation function (tanh, relu, linear)
+    "activation_r": "hard_sigmoid" # Recurrent activation (sigmoid, hard_sigmoid)
+  },
+  "training": {
+    "batch": 250, # Batch size
+    "epochs": 30, # Nuber of epochs
+    "optimizer": "adam" # Optimizer (rmsprop, adam, adamax, adagrad, adadelta, nadam)
+    "lrate": 0.0001 # If optimizer is rmsprop
+  }
 }
 ```
 
 
-The optimizer used is `RMSprop` (Keras documentation recommends it for for RNN),
-the loss function is the mean square error (MSE).
+The optimizer used is `adam`,
+the loss function is the mean square error (MSE), but also the R^2 (coefficient of determination) is computed (it is essentially (1-MSE given that data are z-normalized)
 
- In this problem we can use as baseline the MSE of the persistence model, that is,
+ In this problem we can use as baseline the MSE/R^2 of the persistence model, that is,
   predicting the $t+1$ step in the series as the value of the step $t$.
 
 

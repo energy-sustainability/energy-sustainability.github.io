@@ -18,14 +18,14 @@ ways:
 ### Complementary variables
 
 In the original experiment we used only the **PM10** as input data. The
-measurements include other eight variables four are measurements, the other
-four correspond to the date of the measure. You can test how these variables affect the
-predictions.
+measurements include other eight variables four are measurements (NO, NO2, O3, wind speed), the other
+four correspond to the date of the measure (month, day of month, dey of week, hour). You can test how these variables affect the
+predictions. 
 
 Do the following:
 
 * Modify the arquitecture adequately for the input
-* Study how the MSE changes if you change the size of the units (more/less memory),
+* Study how the MSE/R^2 changes if you change the size of the units (more/less memory),
 the dropout and the length of the input window.
 
 ### Complementary sites
@@ -90,7 +90,7 @@ sequence
 because of *insert reason here* and the results were the same/worse)
 * The interpretation of the results of the experiments:
 
-	* what did work, what did not work (eg: to increase the number neurons up to a number does not give any gains, to use dropout makes think worse consistently, to predict more than one step in the future works with these data up to a limit)
+	* what did work, what did not work (eg: to increase the number neurons up to a number does not give any gains, to use dropout makes thinks worse consistently, to predict more than one step in the future works with these data up to a limit)
 
 	* what set up/architecture/data improves the baseline (persistence), some intuition about why?
 
