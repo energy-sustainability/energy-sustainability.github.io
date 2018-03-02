@@ -71,25 +71,6 @@ scp source_path username@dt01.bsc.es:target_path
 
 Within MinoTauro, data transfer, and the rest of computing clusters of BSC, there is a unique GPFS file system. Students should work only in their home directory, typically ```/home/nct01/username```.
 
-<span style="color:#18932A">
-The materials for this guided laboratory can be copied to your home from here:
-</span>
-```shell
-cp -r /home/nct00/nct00001/.testdir/MAI-DL ~
-``` 
-<span style="color:#18932A">
-After copy the MAI-DL folder into your home your home structure should look similar to:
-</span>
-```
-your_home
-  ├── MAI-DL
-      └── lab_1
-          ├── code_lab1.1.py	# first exercise
-          ├── code_lab1.2.py	# second exercise
-          ├── launcher_lab1_mt.cmd	# launcher of jobs
-          ├── logs
-          └── README.txt
-```
 
 <span style="color:#18932A">
 Once you have a code you want to run (like the example code code_lab1.1.py), you must submit a job. Jobs will get in a queue and are computed in order. To submit a job, it is convenient to use a launcher file. See as an example the launcher_lab1_mt.cmd: 
