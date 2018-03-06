@@ -9,12 +9,23 @@ for the Deep Learning course at the Master in Artificial Inteligence of the Univ
 You can download the code and data for this examples from the following
 github repository [https://github.com/bejar/DLMAI](https://github.com/bejar/DLMAI)
 
+The goal of these tasks is to play with different architectures and base problems including:
+
+* Time series prediction as regression
+* Time series prediction as classification
+* Sentiment analysis 
+* Text generation as character level prediction
+* Sequence to sequence prediction
+
 
 ## Task 1: Time Series Regression (Air Quality Prediction)
 
 The goal of this example is to predict Air Quality of a site in the city of London
 given a window of the previous measurements measured as the number of particulates
-of 10 micrometers in air (PM10 ug/m3)
+of 10 micrometers in air (PM10 ug/m3).
+
+This task is the base for the autonomous laboratory, so collect the results of your work with this data
+and use for comparing with the results of the experiments from the tasks in the autonomous laboratory.
 
 The data for this example has been extracted from the 
 [London Air website](http://www.londonair.org.uk/). This site provides
@@ -95,7 +106,7 @@ computes the regression as output.
 
 
 The optimizer used is `adam`,
-the loss function is the mean square error (MSE), but also the R^2 (coefficient of determination) is computed (it is essentially (1-MSE given that data are z-normalized)
+the loss function is the mean square error (MSE), but also the R^2 (coefficient of determination) is computed (it is essentially 1-MSE given that data are z-normalized)
 
  In this problem we can use as baseline the MSE/R^2 of the persistence model, that is,
   predicting the $t+1$ step in the series as the value of the step $t$.
@@ -110,7 +121,7 @@ Elements to play with:
 * The number of layers
 * Batch size
 * Number of epochs
-* Use an adaptive optimizer like `adagrad` or `adam`
+* Use other adaptive optimizer like `adamax` or `nadam`
 
 - - - -
 
