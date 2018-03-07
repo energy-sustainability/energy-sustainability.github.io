@@ -56,6 +56,7 @@ def load_config_file(nfile, abspath=False):
 
     return json.loads(s)
 
+
 def lagged_vector(data, lag=1, ahead=0):
     """
     Returns a vector with columns that are the steps of the lagged time series
@@ -267,7 +268,7 @@ if __name__ == '__main__':
     print('R2 test= ', r2test)
     print('R2 test persistence =', r2pers)
 
-    resfile = open('result.txt', 'a')
+    resfile = open('result-%s.txt' % config['data']['datanames'][0], 'a')
     resfile.write('DATAS= %d, LAG= %d, AHEAD= %d, RNN= %s, NLAY= %d, NNEUR= %d, DROP= %3.2f, ACT= %s, RACT= %s, '
                   'OPT= %s, R2Test = %3.5f, R2pers = %3.5f\n' %
                   (config['data']['dataset'],
