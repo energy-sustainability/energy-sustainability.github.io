@@ -102,7 +102,7 @@ myseeds = ["behold the merry bride,\nwhite dress with yellow flowers,\nbright sm
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--verbose', help="Verbose output (enables Keras verbose output)", action='store_true', default=False)
-    parser.add_argument('--gpu', help="Use LSTM/GRU grpu implementation", action='store_true', default=False)
+    parser.add_argument('--gpu', help="Use LSTM/GRU gpu implementation", action='store_true', default=False)
     args = parser.parse_args()
 
     verbose = 1 if args.verbose else 0
@@ -154,13 +154,13 @@ if __name__ == '__main__':
 
     model = Sequential()
     if nlayers == 1:
-        model.add(RNN(lsize, input_shape=(maxlen, len(chars)), implementation=impl, dropout=dropout))
+        model.add(RNN(lsize, input_shape=(maxlen, len(chars)), implementation=impl, recurrent_dropout=dropout))
     else:
         model.add(
-            RNN(lsize, input_shape=(maxlen, len(chars)), implementation=impl, dropout=dropout, return_sequences=True))
+            RNN(lsize, input_shape=(maxlen, len(chars)), implementation=impl, recurrent_dropout=dropout, return_sequences=True))
         for i in range(1, nlayers - 1):
-            model.add(RNN(lsize, implementation=impl, dropout=dropout, return_sequences=True))
-        model.add(RNN(lsize, implementation=impl, dropout=dropout))
+            model.add(RNN(lsize, implementation=impl, recurrent_dropout=dropout, return_sequences=True))
+        model.add(RNN(lsize, implementation=impl, recurrent_dropout=dropout))
     model.add(Dense(len(chars)))
     model.add(Activation('softmax'))
 
