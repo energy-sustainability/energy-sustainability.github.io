@@ -61,7 +61,7 @@ This course provides an applied approach to Deep Learning. The course is structu
 - 24/05 - Embedding spaces autonomous lab
 - 31/05 - Presentation of theoretical works
 - 07/06 - Presentation of theoretical works
-- 14/06 - Presentation of theoretical works
+- 14/06 - Presentation of theoretical works (THIS CLASS IS IN A DIFFERENT ROOM:D6-004)
 
 Delivery dates for the labs (delivery must be made through the Raco site), are three weeks after the corresponding autonomous lab:
 - FNN/CNN 05/04 (+1 week due to easter holiday)
