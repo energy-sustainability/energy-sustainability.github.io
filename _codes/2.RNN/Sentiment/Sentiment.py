@@ -43,7 +43,7 @@ def tweet_to_words(raw_tweet):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--verbose', help="Verbose output (enables Keras verbose output)", action='store_true', default=False)
-    parser.add_argument('--gpu', help="Use LSTM/GRU grpu implementation", action='store_true', default=False)
+    parser.add_argument('--gpu', help="Use LSTM/GRU gpu implementation", action='store_true', default=False)
     args = parser.parse_args()
 
     verbose = 1 if args.verbose else 0
@@ -127,12 +127,12 @@ if __name__ == '__main__':
     model.add(Embedding(numwords + 1, embedding, input_length=seq_len))
 
     if nlayers == 1:
-        model.add(RNN(neurons, implementation=impl, dropout=drop))
+        model.add(RNN(neurons, implementation=impl, recurrent_dropout=drop))
     else:
-        model.add(RNN(neurons, implementation=impl, dropout=drop, return_sequences=True))
+        model.add(RNN(neurons, implementation=impl, recurrent_dropout=drop, return_sequences=True))
         for i in range(1, nlayers - 1):
-            model.add(RNN(neurons, dropout=drop, implementation=impl, return_sequences=True))
-        model.add(RNN(neurons, dropout=drop, implementation=impl))
+            model.add(RNN(neurons, recurrent_dropout=drop, implementation=impl, return_sequences=True))
+        model.add(RNN(neurons, recurrent_dropout=drop, implementation=impl))
 
     model.add(Dense(3))
     model.add(Activation('softmax'))
