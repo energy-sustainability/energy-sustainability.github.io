@@ -26,4 +26,11 @@ We encourage you to explore whatever experiments you find most interesting. Foll
 - Any other relevant task, motivated by the other resources linked in the guided lab page.
 
 
+# Original reports from previous courses
+This is a list of interesting reports from previous years. Could serve as inspiration.
 
+- Using a dataset of song lyrics to explore lyrical diversity by musical genre, and to train a genre classifier.
+- Using a "The Lord of the Rings" trilogy text as corpus, for finding relations between character names and locations.
+- Using images embeddings to predict the age of people in photos.
+- Using tweets from people to classify them, and their particularities (e.g., political party).
+- Recognizing mahjong tiles in frames from a video recording of a championship game, using image embeddings.
