@@ -165,9 +165,9 @@ The doc2vec model [25] (also known as Paragraph Vector) extends the word embeddi
 </div>
  <div><p style="text-align: center;">Scheme of the Distributed Memory Model of Paragraph Vectors. Source [25].</p></div>
 
-By inputing both the representations of text blocks and words, PV-DM learns learns representations for words and blocks simultaneously. Once all representations are learnt, this model can be used to generate representations for new blocks of text. By fixing the word representations and training the new block vector until convergence through gradient descent. The document embedding space defined by the representations of the blocks of text can be used to detect similarities between documents.
+By inputing both the representations of text blocks and words, PV-DM learns representations for words and blocks simultaneously. Once all representations are learnt, this model can be used to generate representations for new blocks of text. For example, by fixing the word representations and training the new block vector until convergence through gradient descent. The document embedding space defined by the representations of the blocks of text can be used to detect similarities between documents.
 
-The PV-DM model take into consideration the word order within the documents, as only consecutive words in the document are used (unordered) to train the representation of the document. A second proposed doc2vec model does not consider word order, instead it samples random words from the document and tries to predict those words. This scheme, know as Distributed Bag of Words model of Paragraph vector (PV-DBOW) looks very similar to the original skip-gram model.
+The PV-DM model take into consideration the word order within the documents, as only consecutive words in the document are used (unordered) to train the representation of the document. A second proposed doc2vec model does not consider word order, instead it samples random words from the document and tries to predict those words. This scheme, known as Distributed Bag of Words model of Paragraph vector (PV-DBOW) looks very similar to the original skip-gram model.
 
 
 <div style="text-align:center">
@@ -175,7 +175,7 @@ The PV-DM model take into consideration the word order within the documents, as 
 </div>
  <div><p style="text-align: center;">Scheme of the Distributed Bag of Words Model of Paragraph Vectors. Source [25].</p></div>
 
-Doc2vec authors recommend to use a concatenation of both models for building paragraph vectors: Both the PV-DM and the PV-DBOW. However their acknowledge that PV-DM is the best model on its own.
+Doc2vec authors recommend to use a concatenation of both models for building paragraph vectors: Both the PV-DM and the PV-DBOW. However they consider the PV-DM to be the best model on its own.
 
 
 
