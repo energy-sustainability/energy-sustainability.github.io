@@ -27,8 +27,8 @@ Table of Contents:
     - [Introduction](#mme:intro)
     - [Image and Text Multimodal Embeddings](#mme:imgtxt)
         - [Two separate embeddings](#mme:2emb)
-        - [Pairwise Ranking Loss](mme:rank)
-        - [Available datasets for Image Captioning](mme:datasets)
+        - [Pairwise Ranking Loss](#mme:rank)
+        - [Available datasets for Image Captioning](#mme:datasets)
         - [Applications today](#mme:app)
     - [Other multimodal combinations](#mme:other)
 - [Bibliography](#bib)
@@ -285,62 +285,24 @@ Full-networks embedding introduce the leverage of information encoded in all fea
 
 The resultant full-network embedding is shown to outperform single-layer embeddings in several classification tasks. Specially, experiments show that the full-network is more robust that single-layer embeddings when an appropriate source model is not available.
 
+
 <a name='mme'></a>
 ## Multimodal Embeddings 
 ### Introduction <a name='mme:intro'></a>
-Think for a moment on the first time you went to the beach. What comes into your mind? Do you remember the scene?
-<div style="text-align:center">
-    <img src="/images/beach-1525755_1920.jpg" width="800">
-</div>  
- <div><p style="text-align: center;">Browsing for happiness.</p></div>
-
-Do you remember the view?
-Did the waves sound loud?
-Was the water cold?
-Did it taste salty?
-How did it smell?
-Was it windy?
-Was it sunny?
-What about the sand?
-How did it feel?
-Could you get rid of it?
-
-When you think about the concept beach what comes into your mind?
-Is it just the image of the beach, or also the feel of the sand and the sound of the sea?
-
-**When our brain creates ideas or concepts usually we combine different channels of perception to form our mental image.** 
-In humans the senses convey most of the information.
-We talk about the traditional five senses:
-
-1. Sight (vision)
-2. Hearing (audition)
-3. Taste (gustation)
-4. Smell (olfaction)
-5. Touch (somatosensation)
-
-But also about not so well known ones:
-
-6. Temperature (thermoception)
-7. Kinesthetic sense (proprioception)
-8. Pain (nociception)
-9. Balance (equilibrioception)
-10. Vibration (mechanoreception)
-11. Internal stimuly (e.g. the different chemoreceptors for detecting salt and carbon dioxide concentrations in the blood, or sense of hunger and sense of thirst)
-
-**If we want to represent really complex ideas, we need to include in the representation  information from different channels.**
-
-But, can it be the same representation?
-This is still an open question and an active field of research.
+We have seen different examples of popular embeddings used to encode different kinds of information. Now we wish to obtain a single embedding that encodes information from different modalities. Most studied modalities are image and text but the same aproach can be extended to others like raw sound streams or video. The general idea is to use different embedding functions for each modality and "force" the different embeddings obtained for the same instance to be the same and different from other instances embeddings. They are "forced" by training the parameters of each embedding aplying an appropiate loss function.
+In following section we will explain how this is done in the case of image and text embeddings. In [Two separate embeddings](#mme:2emb) we explain how to build the "two towers", one for each embedding and in [Pairwise Ranking Loss](#mme:rank) we get into detail of a common loss function used.
 
 <a name='mme:imgtxt'></a>
 ### Image and Text Multimodal Embeddings
-We can understand the language as a channel of information. Actually, the channel would be the stream of sound, or the visual input of characters, but we can take a shortcut and use the string of characters itself as the input in the same way we use image pixel values as a representation of a visual input without getting into details on human visual information preprocessing.
 
-The input for an image and text multimodal embedding is a pair of an image and an associated string of text. The output would be a representation where both inputs are represented as a unique entity (or close enough). This common representation is (as usual) a multidimensional vector (or a point in the multimodal embedding space).
+The input for an image and text multimodal embedding is a pair of an image and an associated string of text. As said, the output would be a vector where both inputs are represented as a unique entity. Given that an image and a text are different modalities of information, their original representations are different as well. An image is codified as a 3D vector of pixel intensity values and the text as a string of characters. Thus, different embedding functions are required to map different modalities to a common embedding space.
 
-Given that an image and a text are different modalities of information, their original representations are different as well. An image is codified as a 3D vector of pixel intensity values and the text as a string of characters. Thus, different embeddings are required to map different modalities to a common embedding space.
+<div style="text-align:center">
+    <img src="/images/ascii_mario.jpg" width="400">
+</div>  
+ <div><p style="text-align: center;">Images and text encode information in a different format.</p></div>
 
-The most common problem tackled in this setting is the **image captioning**. In this problem the input we have is an image and a short caption describing the image. We want to represent both as a unique (or close enough) vector. To achieve it we train one embedding for the image and another embedding for the caption. We want hose embeddings to output the same (or similar) point in the multimodal embedding space while keeping unrelated images or captions embeddings far away. In order to achieve this representation we use a specific loss function: [Pairwise Ranking Loss](#mme:rank).
+The most common problem tackled in this setting is the **image captioning**. In this problem the input we have is an image and a short caption describing the image. We want to represent both as a unique vector different from vectors representing other instances.
 
 <div style="text-align:center">
     <img src="/images/mme_space.png" width="800">
@@ -350,7 +312,7 @@ The most common problem tackled in this setting is the **image captioning**. In 
 
 <a name='mme:2emb'></a>
 #### Two separate embeddings
-As introduced before, the most common way to learn a multimodal embedding is to learn two separate embeddings, for image and text. Using embeddings based on Neural Networks is very convenient since the error computed in the Ranking Loss imposed to the multimodal embedding can be easily back-propagated to the NN parameters of both embeddings.
+As introduced before, the most common way to learn a multimodal embedding is to learn two separate embeddings, for image and text. Using embeddings based on Neural Networks is very convenient since the error computed in the Loss imposed to the multimodal embedding can be easily back-propagated to the NN parameters of both embeddings.
 
 <div style="text-align:center">
     <img src="/images/img-txt1.png" width="800">
@@ -368,7 +330,7 @@ For **image embeddings** the CNN embedding is the "standard". Different works pr
 <div style="text-align:center">
     <img src="/images/img-txt2.png" width="800">
 </div>  
- <div><p style="text-align: center;">Example of image embedding using the Full Network Embedding (FNE) to form a multimodal embedding [41].</p></div>
+ <div><p style="text-align: center;">Example of **image embedding** using the Full Network Embedding (FNE) to form a multimodal embedding [41].</p></div>
 
 Most usually in step 3 only the features from the last layer of the CNN are selected, although any kind of representation can be used in this step. In the examples we use the Full Network Embedding (FNE) to form a multimodal embedding [41], a solution shown to improve results over a one-layer CNN embedding.
 
@@ -385,7 +347,7 @@ Thus, the solutions usually implemented are different. In this case the text emb
 <div style="text-align:center">
     <img src="/images/img-txt3.png" width="800">
 </div>  
- <div><p style="text-align: center;">Example of **image embedding** using a Gated Recurrent Units Neural Network to form a multimodal embedding [41].</p></div>
+ <div><p style="text-align: center;">Example of **text embedding** using a Gated Recurrent Units Neural Network to form a multimodal embedding [41].</p></div>
 
 A previous step required is to map the vocabulary into GRU's input vectors. A lookup table (i.e., a word dictionary with one-hot vector encoding) can be enough, but other encodings, like the ones explained in [word2vec](#word2vec), help to achieve better results.
 
@@ -403,7 +365,7 @@ As introduced before, our objective is to obtain a common representation for inp
 In this case the training procedure consist on the optimization of the pairwise ranking loss between the correct image-caption pair and a random pair. Assuming that a correct pair of elements should be closer in the multimodal space than a random pair. The loss can be formally defined as follows:
 
 <div style="text-align:center">
-    <img src="/images/Pairwise_ranking_loss.jpg" width="600">
+    <img src="/images/Pairwise_ranking_loss.jpg" width="800">
 </div>  
  
 
@@ -462,16 +424,16 @@ Focusing in an extended version of multimodal embeddings, Kaiser et al. [44] pre
 
 Authors follow a 2 steps strategy:
 
- - First step consist of unifying all nature representations through a set of modality-specific sub-networks. These sub-networks are called modality nets because they are specific to each modality (e.g., image, text or audio) and define transformations between these external domains and a unified representation. Modality nets are designed to be computationally minimal, authors only want to obtain a rich feature representation from these nets, letting the major computation effort on the second step. 
+ - First step consist of unifying all nature representations through a set of **modality-specific sub-networks**. These sub-networks are called modality nets because they are specific to each modality (e.g., image, text or audio) and define transformations between these external domains and a unified representation. Modality nets are designed to be computationally minimal, authors only want to obtain a rich feature representation from these nets, letting the major computation effort on the second step. 
 
- - Second step consist on a trainable model capable of dealing with all embedding representations as input. This model is formed by three main blocks: Encoder, Input-Output Mixer and Decoder. The Encoder codifies the input embeddings from all modality nets and outputs the encoded input. The Input-Output Mixer takes as input the encoded input and decoded output to evaluate the encoded output. Lastly, the Decoder takes as input the encoded input and encoded output to generate the decoded output. These three blocks architecture is analogous to an state machine, where there is an input managed by the Encoder block, and output managed by the Decoder block and a state managed by the I/O Mixer.
+ - Second step consist on a trainable model capable of dealing with all embedding representations as input. This model is formed by three main blocks: Encoder, Input-Output Mixer and Decoder. The Encoder codifies the input embeddings from all modality nets and outputs the encoded input. The Input-Output Mixer takes as input the encoded input and decoded output to evaluate the encoded output. Lastly, the Decoder takes as input the encoded input and encoded output to generate the decoded output. These three blocks architecture is analogous to an **state machine**, where there is an input managed by the Encoder block, and output managed by the Decoder block and a state managed by the I/O Mixer.
 
 <div style="text-align:center">
     <img src="/images/omlta_overview.png" width="500">
 </div>  
  <div><p style="text-align: center;">The MultiModel, with modality-nets, an Encoder, an I/O Mixer, and an autoregressive Decoder. Source [44].</p></div>
 
-The MultiModel core blocks (i.e., Encoder, I/O Mixer and Decoder) are composed by smaller blocks: Convolutional blocks, Attentional blocks and Mixture-of-Experts blocks. All blocks provide a different set of properties. Convolutional and Attentional blocks are trivial: a Convolutional block performs local computation while an Attentional block allows to focus on content based on its position. However, a Mixture-of-Experts block may not be that trivial. It is formed by a set of simple feed-forward neural networks (experts) and a trainable gating network responsible of selecting a sparse combination of experts based on the input. So, this block is responsible of specific knowledge computation.
+**The MultiModel core blocks** (i.e., Encoder, I/O Mixer and Decoder) are composed by smaller blocks: **Convolutional blocks, Attentional blocks and Mixture-of-Experts blocks**. All blocks provide a different set of properties. Convolutional and Attentional blocks are trivial: a Convolutional block performs local computation while an Attentional block allows to focus on content based on its position. However, a Mixture-of-Experts block may not be that trivial. It is formed by a set of simple feed-forward neural networks (experts) and a trainable gating network responsible of selecting a sparse combination of experts based on the input. So, this block is responsible of specific knowledge computation.
 
 <div style="text-align:center">
     <img src="/images/omlta_blocks.png" width="1000">
@@ -479,7 +441,6 @@ The MultiModel core blocks (i.e., Encoder, I/O Mixer and Decoder) are composed b
  <div><p style="text-align: center;">Architecture of the MultiModel divided by blocks. Source [44].</p></div>
 
 Authors demonstrate, for the first time, that a single deep learning model can jointly learn a number of large-scale tasks from multiple domains. A really interesting feature of that model is that we can extract a 4-modal embedding representation from the encoding block to work with.
-
 
 
 
