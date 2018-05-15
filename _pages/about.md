@@ -156,3 +156,7 @@ The codes used in the lab sessions can be downloaded from the following location
 For the evaluation of the theoretical aspects of the course, we offer a list of papers of interest which the student may chose to read and review. These are loosely categorized. We strongly suggest that the student choose papers not found on that list, according to their own interest. The newer the paper, the best.
 
 [Papers of interests](papers-of-interest/)
+
+### Stuff to read
+
+- [A post describing the ideas behind ResNet, Inception and Xception is simple terms](https://towardsdatascience.com/an-intuitive-guide-to-deep-network-architectures-65fdc477db41)
