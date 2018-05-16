@@ -12,6 +12,23 @@ Table of Contents:
 
 ---
 
+The codes introduced in this guided lab can be found [here](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/3.Embeddings)
+
+For getting an interactive session with MinoTauro:
+```shell
+mnsh -k80 -g
+```
+
+For running in MinoTauro, the following modules are needed for python 2.7:
+```shell
+module purge; module load K80 cuda/7.5 mkl/2017.0.098 CUDNN/5.1.3 intel-opencl/2016 python/2.7.12_ML
+```
+
+And for python 3.6
+```shell
+module purge; module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
+```
+
 
 <a name='basic'></a>
 ## Basic word2vec experiments
@@ -90,7 +107,7 @@ Can you come up with any other analogy?
 <a name='image_emb'></a>
 ## Image embedding experiments
 
-Processing image embeddings of a visual dataset only requires a dataset of images and a pre-trained deep architecture. Fortunately, pre-trained deep models are often publictly available for any deep learning tool. In our case, we are going to use the vgg16 architecture pre-trained using the ImageNet2012 dataset (Surely you didn't expect to be ImageNet dataset!). In order to use the pre-trained wieghts of the vgg16 architecture in Keras, we will have to download the weights file and copy the file into the GPFS system:
+Processing image embeddings of a visual dataset only requires a dataset of images and a pre-trained deep architecture. Fortunately, pre-trained deep models are often publictly available for any deep learning tool. In our case, we are going to use the vgg16 architecture pre-trained using the ImageNet2012 dataset. In order to use the pre-trained weights of the vgg16 architecture in Keras, we will have to download the weights file and copy the file into the GPFS system:
 
 ```
 wget https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels.h5
