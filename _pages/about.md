@@ -157,6 +157,9 @@ For the evaluation of the theoretical aspects of the course, we offer a list of 
 
 [Papers of interests](papers-of-interest/)
 
+<a name='toread'></a>
 ### Stuff to read
 
 - [A post describing the ideas behind ResNet, Inception and Xception is simple terms](https://towardsdatascience.com/an-intuitive-guide-to-deep-network-architectures-65fdc477db41)
+- [Troubling Trends in Machine Learning Scholarship](http://approximatelycorrect.com/2018/07/10/troubling-trends-in-machine-learning-scholarship/) A position paper regarding frequent problems with current machine learning papers, and tips on how to avoid them.
+- [Differences between L1 and L2 as Loss Function and Regularization](http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/)
