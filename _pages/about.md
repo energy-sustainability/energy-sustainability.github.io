@@ -45,29 +45,31 @@ This is the official web page for the contents of the lectures from the Deep Lea
 This course provides an applied approach to Deep Learning. The course is structured in 4 thematic blocks, and each block as 3 parts: theory, guided laboratory and autonomous laboratory.
 
 <a name='calendar'></a>
-### Course Calendar for the Spring 2017-2018 semester
+### Course Calendar for the Fall 2018-2019 semester
 
-- 22/02 - FNN and CNN theory
-- 01/03 - FNN and CNN guided lab
-- 08/03 - FNN and CNN autonomous lab
-- 15/03 - RNN theory
-- 22/03 - RNN guided lab
-- 05/04 - RNN autonomous lab
-- 12/04 - High Performance aspects theory
-- 19/04 - High Performance aspects guided lab
-- 26/04 - High Performance aspects autonomous lab
-- 10/05 - Embedding spaces theory
-- 17/05 - Embedding spaces guided lab
-- 24/05 - Embedding spaces autonomous lab
-- 31/05 - Presentation of theoretical works
-- 07/06 - Presentation of theoretical works
-- 14/06 - Presentation of theoretical works (THIS CLASS IS IN A DIFFERENT ROOM:D6-004)
+- 18/09 - FNN and CNN theory
+- 25/09 - FNN and CNN guided lab
+- 02/10 - FNN and CNN autonomous lab
+- 09/10 - RNN theory
+- 16/10 - RNN guided lab
+- 23/10 - RNN autonomous lab
+- 30/10 - Embedding spaces theory
+- 06/11 - Embedding spaces guided lab
+- 13/11 - Embedding spaces autonomous lab
+- 20/11 - High Performance aspects theory        
+- 27/11 - High Performance aspects guided lab    
+- 04/12 - High Performance aspects autonomous lab
+- 11/12 - Presentation of theoretical works
+- 18/12 - Presentation of theoretical works
+- 12/01 - Presentation of theoretical works 
+- 19/01 - Presentation of theoretical works (If necessary)
+
 
 Delivery dates for the labs (delivery must be made through the Raco site), are three weeks after the corresponding autonomous lab:
-- FNN/CNN 05/04 (+1 week due to easter holiday)
-- RNN 26/04
-- HPC4DL 17/05
-- Embeddings 14/06
+- FNN/CNN 23/10
+- RNN 13/11
+- Embeddings 04/12 
+- HPC4DL 12/01 
 
 
 <a name='theory'></a>
