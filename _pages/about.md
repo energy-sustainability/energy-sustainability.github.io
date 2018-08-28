@@ -33,7 +33,7 @@ This is the official web page for the contents of the lectures from the Deep Lea
 
 <a name='lecturers'></a>
 ### Lecturers
-- Dario Garcia-Gasulla (Coordinator) (BSC, dario.garcia@bsc.es) (There are currently openings at HPAI-BSC. Send me an email if you may be interested)
+- Dario Garcia-Gasulla (Coordinator) (BSC, dario.garcia@bsc.es) (There are currently openings at <a href="http://hpai.bsc.es">HPAI-BSC</a>. Send me an email if you may be interested)
 - Marc Casas (BSC, marc.casas@bsc.es)
 - Javier Bejar (UPC-CS, bejar@cs.upc.edu)
 
