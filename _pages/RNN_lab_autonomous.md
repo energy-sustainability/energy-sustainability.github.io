@@ -15,7 +15,7 @@ datasets and datasources. Using one of those is not a requirement, but don't use
 
 You can also use any framework you wish, train model you can find, or online dataset. 
 
-In the end you must upload to the *raco* a 10 pages PDF document (references not included) with your work. 
+In the end you must upload to the *raco* a report 8-10 pages long as a PDF document (references not included) with your work. 
 Minimum font size of 11. 
 
 In general, it is better to focus in one aspect and to study it thoroughly, than to do small experiments 
@@ -63,32 +63,32 @@ This is a list of possible datasets and data sources:
 
 * From Kaggle:
 
-    * https://www.kaggle.com/decide-soluciones/air-quality-madrid
-    * https://www.kaggle.com/malekzadeh/motionsense-dataset
-    * https://www.kaggle.com/daytrader/ema-65-crossover
-    * https://www.kaggle.com/jswicker/the-smell-of-fear
-    * https://www.kaggle.com/nicapotato/pollution-in-atchison-village-richmond-ca
-    * https://www.kaggle.com/ankurankan/hourly-pollution-levels-in-indian-cities
-    * https://www.kaggle.com/c/web-traffic-time-series-forecasting
-    * https://www.kaggle.com/rmisra/news-category-dataset
-    * https://www.kaggle.com/pavansanagapati/urban-sound-classification
-    * https://www.kaggle.com/bharadwaj6/kindle-reviews
-    * https://www.kaggle.com/sid321axn/amazon-alexa-reviews
+    * [air quality madrid](https://www.kaggle.com/decide-soluciones/air-quality-madrid)
+    * [motionsense](https://www.kaggle.com/malekzadeh/motionsense-dataset)
+    * [ema 65 crossover](https://www.kaggle.com/daytrader/ema-65-crossover)
+    * [the smell of fear](https://www.kaggle.com/jswicker/the-smell-of-fear)
+    * [pollution in atchison village richmond ca](https://www.kaggle.com/nicapotato/pollution-in-atchison-village-richmond-ca)
+    * [hourly pollution levels in indian cities](https://www.kaggle.com/ankurankan/hourly-pollution-levels-in-indian-cities)
+    * [web traffic time series forecasting](https://www.kaggle.com/c/web-traffic-time-series-forecasting)
+    * [news category dataset](https://www.kaggle.com/rmisra/news-category-dataset)
+    * [urban sound classification](https://www.kaggle.com/pavansanagapati/urban-sound-classification)
+    * [kindle reviews](https://www.kaggle.com/bharadwaj6/kindle-reviews)
+    * [amazon alexa reviews](https://www.kaggle.com/sid321axn/amazon-alexa-reviews)
 
 * From UCI:
 
-    * https://archive.ics.uci.edu/ml/datasets/Activity+Recognition+system+based+on+Multisensor+data+fusion+%28AReM%29
-    * https://archive.ics.uci.edu/ml/datasets/Beijing+PM2.5+Data
-    * https://archive.ics.uci.edu/ml/datasets/Bach+Chorales
-    * https://archive.ics.uci.edu/ml/datasets/Character+Trajectories
-    * https://archive.ics.uci.edu/ml/datasets/Dataset+for+ADL+Recognition+with+Wrist-worn+Accelerometer
-    * https://archive.ics.uci.edu/ml/datasets/Epileptic+Seizure+Recognition
+    * [Activity Recognition](https://archive.ics.uci.edu/ml/datasets/Activity+Recognition+system+based+on+Multisensor+data+fusion+%28AReM%29)
+    * [Beijing PM2.5 Data](https://archive.ics.uci.edu/ml/datasets/Beijing+PM2.5+Data)
+    * [Bach Chorales](https://archive.ics.uci.edu/ml/datasets/Bach+Chorales)
+    * [Character Trajectories](https://archive.ics.uci.edu/ml/datasets/Character+Trajectories)
+    * [Dataset for ADL Recognition](https://archive.ics.uci.edu/ml/datasets/Dataset+for+ADL+Recognition+with+Wrist-worn+Accelerometer)
+    * [Epileptic Seizure Recognition](https://archive.ics.uci.edu/ml/datasets/Epileptic+Seizure+Recognition)
 
 * Other data repositores and lists:
-    * https://github.com/googlecreativelab/quickdraw-dataset
-    * https://archive.ics.uci.edu/ml/index.php
-    * https://skymind.ai/wiki/open-datasets
-    * https://www.microsoft.com/en-us/research/academic-program/data-science-microsoft-research/#!dataset-directory
-    * http://bigdata-madesimple.com/70-websites-to-get-large-data-repositories-for-free/
-    * https://www.kdnuggets.com/datasets/index.html
-    * https://physionet.org/physiobank/database/
+    * [Google Quickdraw Dataset](https://github.com/googlecreativelab/quickdraw-dataset)
+    * [UCI ML repository](https://archive.ics.uci.edu/ml/index.php)
+    * [Skywind list of open datasets](https://skymind.ai/wiki/open-datasets)
+    * [Microsoft Research data science repository](https://www.microsoft.com/en-us/research/academic-program/data-science-microsoft-research/#!dataset-directory)
+    * [Big Data Made Simple list of free dataserts](http://bigdata-madesimple.com/70-websites-to-get-large-data-repositories-for-free/)
+    * [KDnuggets list of datasets](https://www.kdnuggets.com/datasets/index.html)
+    * [Physionet database](https://physionet.org/physiobank/database/)
