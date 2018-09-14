@@ -4,103 +4,91 @@ permalink: /rnn-lab-autonomous/
 
 ## Recurrent Neural Networks (Autonomous Laboratory)
 
-This session is for exploring the effects of the different elements of 
-RNNs using a specific dataset. In this case we are going to extend the Air Quality
-prediction example that we used in the previous session.
-
-Deliver your report before **April 26th** using the raco.
+The autonomous laboratory is open for your exploration. Using the basic code provided in the guided laboratory, 
+you should modify it to test different settings, and to understand the effect of the various components. 
 
 
-In the original example we predicted one step of the future PM10 (next hour)
-using a window of previous measurements. We can extend the problem in different
-ways:
+You could use any dataset you wish as long as it is a problem that involves sequential data (e.g. time series, music, 
+trajectories, text...).  
+At the end of this page you have a list of possible 
+datasets and datasources. Using one of those is not a requirement, but don't use a dataset that is too simple. 
 
-### Complementary variables
+You can also use any framework you wish, train model you can find, or online dataset. 
 
-In the original experiment we used only the **PM10** as input data. The
-measurements include other eight variables four are measurements (NO, NO2, O3, wind speed), the other
-four correspond to the date of the measure (month, day of month, dey of week, hour). You can test how these
-variables affect the predictions. 
+In the end you must upload to the *raco* a report 8-10 pages long as a PDF document (references not included) with your work. 
+Minimum font size of 11. 
 
-Do the following:
+In general, it is better to focus in one aspect and to study it thoroughly, than to do small experiments 
+on different topics without going any deep.
 
-* Adapt the code that you have to generate and  process a sequence with more than one variable 
-* Study how the MSE/R^2 changes if you change the size of the units (more/less memory),
-the dropout and the length of the input window.
+In this document there is a list of suggested questions you may consider to explore. 
+It is not necessary to answer any or all these questions. 
+You may choose to perform different experiments, for exploring different aspects of recurrent neural networks. 
+Follow your own curiosity.
 
-### Complementary sites
+### Possible questions
 
-In the original experiment we predicted the **PM10** using the data from
-one site, the dataset includes other three additional sites that are geographically
-close. We can leverage the information
-of the *PM10* from the other sites.
-
-Do the following:
-
- * Use the previous architecture with the PM10 from all sites and study how
- the MSE changes if you change the size of the units (more/less memory),
-the dropout and the lenth of the input window.
-* If you have time you can also generate a dataset that includes all the variables from all the sites and test
-if to have all these information improves the results.
- 
-
-### Multi step prediction
-
-We can obtain a multi step prediction using the original model simply by adding the
-value predicted to the current set of measurements and discarding the oldest one, 
-just like in the text generation task example from the guided laboratory.
-
-The new prediction will be two steps ahead, $n-1$ measurements will be actual
-observations and one will be a predicted one.
-
-Perform some experiment using this method and observe:
-
-* How the MSE degrades the more steps in the future we predict
-* How the MSE changes if we extend the input window
-
-For comparing the MSE you should separate the predictions according to how far
-they are. That is, compute the MSE for the one step prediction, then
-for the second step prediction, and so on. 
-
-### Sequence to sequence prediction
-
-An alternative to shifting the input and adding the predictions to have a multi
- step prediction would be to use a network that links a window of measurements to a
-window of predictions.
-
-Do the following:
-
-* Adapt the sequence to sequence arquitecture from the summation example to this
-task
-* Study how the MSE of the predictions changes with the length of the predicted
-sequence
+* Does the type of recurrent unit cell have an impact on the results (Vanilla RNN, LSTM, GRU)
+* Does the use of multiple layers help?
+* How many neurons per layer are enough to overfit?
+* When overfitting, what is the result of applying various regularization techniques? Is the behaviour different for different types of recurrent units?
+* Does the optimization algorithm have an impact on the speed the network converges
+* Does the batch size have an impact on the results?
+* If the data has sequences of different length, does have an impact if the padding is at the begginnig or the end?
+* If the sequences are reversed, does it improve the result? 
+* If the dataset is a continuous sequence and it is a regression problem, using longer windows impoves the accuracy?
+* If other methods have been already applied to the dataset, do recurrent networks obtain better results?
 
 
-##  What you have to do
+### Tips
+Follows a list of tips for your report
 
- First of all, finish the experiments with the baseline from the guided laboratory task and
- use the results you have obtained to plan
- the experiments that you want to perform for these additional tasks. This does not mean that
- the plan is written on stone, revise the plan as you see fit given the results or
-  extend/change the experiments when you judge that it is interesting given the results.
-
-  Execute the experiments and record all the results and decisions that you make
-
- Write a report explaning:
-
-* The plan of the experiments that you have performed
-* What were you expecting with each experiment and what you actually obtained 
-(eg, you though that some conditions of the experiment would improve the results 
-because of *insert reason here* and the results were the same/worse)
-* The interpretation of the results of the experiments:
-
-	* what did work, what did not work (eg: to increase the number neurons up to a number does not give any gains, to use dropout makes thinks worse consistently, to predict more than one step in the future works with these data up to a limit)
-
-	* what set up/architecture/data improves the baseline (persistence), some intuition about why?
-
-Use statistics and graphics to support your explanations.
+- Properly introduce the data you work with
+- Define the problem to solve (classification or regression) and the adequate loss function
+- Properly split the data into train, test and validation (if needed)
+- Don't use datasets for which achieving a 95% of accuracy is straight-forward 
+- Use and show loss and/or accuracy plots in your discussion
+- Apply techniques (e.g., regularization, dropout...) for a reason and properly motivate it. Dont do it just for the sake of doing stuff.
+- Use a number of neurons per layer which is a power of 2
+- Don't try to use all possible methods and techniques. Focus on certain aspects, try to understand and interpret their behavior
+- Do not show only positive results, failures are as important as successes
+- Use statistics and graphics to support your explanations
+- When using a plot, stare at it for a while. Try to reason what can be understood from it. Make yourself related questions and act in consequence.
+- To properly analyze and understand a model, you must train it to overfitting
 
 
-Deliver your report before **April 26th** using the raco.
+---
 
+This is a list of possible datasets and data sources:
 
+* From Kaggle:
+
+    * [air quality madrid](https://www.kaggle.com/decide-soluciones/air-quality-madrid)
+    * [motionsense](https://www.kaggle.com/malekzadeh/motionsense-dataset)
+    * [ema 65 crossover](https://www.kaggle.com/daytrader/ema-65-crossover)
+    * [the smell of fear](https://www.kaggle.com/jswicker/the-smell-of-fear)
+    * [pollution in atchison village richmond ca](https://www.kaggle.com/nicapotato/pollution-in-atchison-village-richmond-ca)
+    * [hourly pollution levels in indian cities](https://www.kaggle.com/ankurankan/hourly-pollution-levels-in-indian-cities)
+    * [web traffic time series forecasting](https://www.kaggle.com/c/web-traffic-time-series-forecasting)
+    * [news category dataset](https://www.kaggle.com/rmisra/news-category-dataset)
+    * [urban sound classification](https://www.kaggle.com/pavansanagapati/urban-sound-classification)
+    * [kindle reviews](https://www.kaggle.com/bharadwaj6/kindle-reviews)
+    * [amazon alexa reviews](https://www.kaggle.com/sid321axn/amazon-alexa-reviews)
+
+* From UCI:
+
+    * [Activity Recognition](https://archive.ics.uci.edu/ml/datasets/Activity+Recognition+system+based+on+Multisensor+data+fusion+%28AReM%29)
+    * [Beijing PM2.5 Data](https://archive.ics.uci.edu/ml/datasets/Beijing+PM2.5+Data)
+    * [Bach Chorales](https://archive.ics.uci.edu/ml/datasets/Bach+Chorales)
+    * [Character Trajectories](https://archive.ics.uci.edu/ml/datasets/Character+Trajectories)
+    * [Dataset for ADL Recognition](https://archive.ics.uci.edu/ml/datasets/Dataset+for+ADL+Recognition+with+Wrist-worn+Accelerometer)
+    * [Epileptic Seizure Recognition](https://archive.ics.uci.edu/ml/datasets/Epileptic+Seizure+Recognition)
+
+* Other data repositores and lists:
+    * [Google Quickdraw Dataset](https://github.com/googlecreativelab/quickdraw-dataset)
+    * [UCI ML repository](https://archive.ics.uci.edu/ml/index.php)
+    * [Skywind list of open datasets](https://skymind.ai/wiki/open-datasets)
+    * [Microsoft Research data science repository](https://www.microsoft.com/en-us/research/academic-program/data-science-microsoft-research/#!dataset-directory)
+    * [Big Data Made Simple list of free dataserts](http://bigdata-madesimple.com/70-websites-to-get-large-data-repositories-for-free/)
+    * [KDnuggets list of datasets](https://www.kdnuggets.com/datasets/index.html)
+    * [Physionet database](https://physionet.org/physiobank/database/)
