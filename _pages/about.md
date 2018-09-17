@@ -88,6 +88,7 @@ The guided laboratory provides working code that can serve as a starting point f
 
 The autonomous laboratory session is intended for students to experiment with Deep Learning methods, and draw their own conclusions. On each autonomous laboratory, a set of example experiments will be detailed, but students are strongly encouraged to define their own experiments based on their own curiosity.
 
+For running the lab experiments, students will be given access to computational resources. However, these resources are shared with other people though a queue system. Its important to maxime the use of your resources, as the priority of your jobs will decrease as you consume your quota. Try to adjust the amount of resources you need for every job (both in number of nodes and in time). Plan your experiments in advance. Dont wait until 2 days before the delivery of the report to submit jobs, as these may be queued for a while.
 
 <a name='overlap'></a>
 ### Overlap with other courses

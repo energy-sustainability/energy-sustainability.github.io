@@ -298,6 +298,24 @@ The AlexNet architecture is composed by 5 pairs of conv-pooling layers, with 3 f
 
 On top of the last fully-connected layer, either a Softmax or a SVM is placed, to perform the final classification. Other relevant CNN that follow this same scheme are the VGG16/19 [36] (by Oxford VGG research group), the Inception (first called GoogLeNet [37], by Google) and the ResNet [38] (by Microsoft).
 
+#### Fully Convolutional Networks
+
+CNNs with a fully connected layers are bounded to a fixed input size, as these neurons expect a fixed number of inputs value. To be able to process inputs of varying size, fully convolutional networks are currently popular. By replacing fully connected neurons, by convolutional neurons with kernels covering the whole input, one obtains a network analogous to a traditional CNN, which does not limit input size.
+
+#### ResNets and Inception
+
+Beyond the traditional architectures, two of the most significant contributions are ResNet and Inception. On its own way, these provide the network with the hability to chose over a wider range of patterns, without increasing the complexity of the model.
+
+<div style="text-align:center">
+    <img src="/images/inception.png" width="550">
+	</div> 
+<p style="text-align: center;">Inception block design, from [37]. Enables learning filters of all sizes.</p>
+
+<div style="text-align:center">
+    <img src="/images/resnet.png" width="550">
+	</div> 
+<p style="text-align: center;">ResNet residual block design, from [38]. Enables learning the identity function, and training networks of any depth.</p>
+
 
 
 <a name='inside'></a>
