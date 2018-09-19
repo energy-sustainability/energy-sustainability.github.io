@@ -75,6 +75,15 @@ By applying the backpropagation process iteratively (forward pass of the input, 
 
 With this new training methodology, research on ANN became active again. LeCun et. al. [11] developed a digit recognition system using data from the US Postal Service in 1989, and showed how ANN could be used to solve complex practical problems. LeCun's system included a layer of convolutional neurons, which had been previously proposed by Fukushima in 1980 [12].
 
+<a name='training_cycle'></a>
+
+Through backpropagation, the training cycle is reduced to 3 basic steps. First, feedforward the input to predict its label. Second, compute the error made by the network. Third, backpropagate the error, and adjust the weights accordingly.
+
+<div style="text-align:center">
+    <img src="/images/training_inference1.png" width="500">
+	</div>
+	<p style="text-align: center;">Scheme of the training and inference processes. From [48].</p>
+
 <a name='activations'></a>
 ### Activation Functions
 
@@ -317,6 +326,13 @@ Beyond the traditional architectures, two of the most significant contributions 
 <p style="text-align: center;">ResNet residual block design, from [38]. Enables learning the identity function, and training networks of any depth.</p>
 
 
+<a name='representations'></a>
+### Deep Nets and Representations
+
+Deep neural networks are representation learning techniques. Their basic purpose is to generate representations that can be used afterwards by another component, such as a classifier (e.g., softmax). The power of deep nets lies within its internal layers, which generate powerful data descriptors, such that a posterior process can make use of those for some task. This is the reason of the popularity of deep nets. Their applicability to a huge amount of tasks.
+
+
+
 
 <a name='inside'></a>
 ### CNN from the Inside
@@ -507,6 +523,8 @@ There are many other applications of CNNs. In combination with reinforcement lea
 [46] [http://blog.mrtanke.com/2016/10/24/An-overview-of-gradient-descent-optimization-algorithms/](http://blog.mrtanke.com/2016/10/24/An-overview-of-gradient-descent-optimization-algorithms/)
 
 [47] [https://medium.com/@erikhallstrm/backpropagation-from-the-beginning-77356edf427d](https://medium.com/@erikhallstrm/backpropagation-from-the-beginning-77356edf427d)
+
+[48] [https://devblogs.nvidia.com/wp-content/uploads/2015/08/training_inference1.png](https://devblogs.nvidia.com/wp-content/uploads/2015/08/training_inference1.png)
 
 ### Other uncited sources:
 
