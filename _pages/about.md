@@ -167,3 +167,4 @@ For the evaluation of the theoretical aspects of the course, we offer a list of 
 - [Troubling Trends in Machine Learning Scholarship](http://approximatelycorrect.com/2018/07/10/troubling-trends-in-machine-learning-scholarship/) A position paper regarding frequent problems with current machine learning papers, and tips on how to avoid them.
 - [Differences between L1 and L2 as Loss Function and Regularization](http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/)
 - [Basic concepts and cheatsheets on ML](https://stanford.edu/~shervine/teaching/cs-229.html)
+- [List of interesting papers with available code. Interesting for replicating their results and playing around on top.](https://github.com/zziz/pwc)
