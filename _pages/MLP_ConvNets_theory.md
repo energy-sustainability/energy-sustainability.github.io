@@ -81,8 +81,8 @@ Through backpropagation, the training cycle is reduced to 3 basic steps. First, 
 
 <div style="text-align:center">
     <img src="/images/training_inference1.png" width="500">
-	</div>
-	<p style="text-align: center;">Scheme of the training and inference processes. From [48].</p>
+</div>
+<p style="text-align: center;">Scheme of the training and inference processes. From [48].</p>
 
 <a name='activations'></a>
 ### Activation Functions
