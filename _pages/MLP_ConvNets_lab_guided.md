@@ -27,7 +27,7 @@ Currently there are several deep learning frameworks available for developers. T
 - CNTK (Microsoft)
 - TensorFlow (Google)
 - Theano
-- Torch
+- Torch/PyTorch
 - Keras
 
 Chosing one or another depends on the developer experience and the nature of the problem. In this course we will use Keras, since it is very easy to use and provides many functionalities that allows uers to start training networks in very short time. Keras is written in Python and in the background it may use TensorFlow, Theano or CNTK.
@@ -90,10 +90,8 @@ Once you have a code you want to run (like the example code code_lab1.1.py), you
 # @ wall_clock_limit= 00:05:00	# limit of time
 
 module purge
-module load merovingian
-# merovingian2712 will be the equivalent to call python in a normal environment
-# the parameter is the file you want to execute
-merovingian2712 $HOME/MAI-DL/lab_1/code_lab1.1.py
+module load module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
+python $HOME/MAI-DL/lab_1/code_lab1.1.py
 ```
 
 Make sure the paths in the launcher all point to your directories. "initialdir" indicates the source path for the execution, and the line "merovingian2712 code.py" should refer to the location of the file you wish to execute.
@@ -128,7 +126,7 @@ Hence, since from Minotauro we have not access to Internet we will download the 
 </span>
 ```python
 # from our pc
-wget https://s3.amazonaws.com/img-datasets/mnist.pkl.gz
+wget https://s3.amazonaws.com/img-datasets/mnist.npz
 scp mnist.pkl.gz <your_user>@dt01.bsc.es:/<your_home>/.keras/datasets/
 # if the copy fails check that the folder exists, if not create it
 ```
@@ -322,7 +320,7 @@ nn.add(Dense(128, activation='relu'))
 nn.add(Dense(10, activation='softmax'))
 ```
 
-This simple model can solve the MNIST classification problem with an accuracy over 98%. For a more complicated problem, try the CIFAR10 dataset (see the [dataset webpage](https://www.cs.toronto.edu/~kriz/cifar.html) to analyze the type of problem at hand.
+This simple model can solve the MNIST classification problem with an accuracy over 98%. For a more complicated problem, try the CIFAR10 dataset (see the [dataset webpage](https://www.cs.toronto.edu/~kriz/cifar.html) to analyze the type of problem at hand. Download it from here: https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 ```python
 from keras.datasets import cifar10
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
