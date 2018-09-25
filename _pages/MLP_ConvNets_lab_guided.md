@@ -95,7 +95,7 @@ module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3
 python $HOME/MAI-DL/lab_1/code_lab1.1.py
 ```
 
-Make sure the paths in the launcher all point to your directories. "initialdir" indicates the source path for the execution, and the line "merovingian2712 code.py" should refer to the location of the file you wish to execute.
+Make sure the paths in the launcher all point to your directories. "initialdir" indicates the source path for the execution, and the line "python code.py" should refer to the location of the file you wish to execute.
 
 The other main parameter of the launcher is the wall_clock_limit. Its important to optimize resources, so try to set limits not too large. Keep in mind that the job will be cancelled once the limit is reached, even if the job is still running. Longer jobs have lower priority, and will take more time to get out of the queue.
 
