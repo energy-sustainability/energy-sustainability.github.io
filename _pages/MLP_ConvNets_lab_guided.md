@@ -79,20 +79,20 @@ Once you have a code you want to run (like the example code code_lab1.1.py), you
 ```
 #!/bin/bash
 # @ job_name = code_lab1.2
-# @ initialdir = /home/nct01/nct01025/	# source path for the execution [optional]
-# @ class = training	# queue where to put the job
-# @ output= %j.out 	# name format of the output file
-# @ error= %j.err 	# name format of the output file
+# @ initialdir = /home/nct01/nct01025/	
+# @ class = training	
+# @ output= %j.out 	
+# @ error= %j.err 	
 # @ total_tasks= 1 
-# @ gpus_per_node= 1	# number of gpus
+# @ gpus_per_node= 1	
 # @ cpus_per_task= 1
 # @ features= k80
-# @ wall_clock_limit= 00:05:00	# limit of time
+# @ wall_clock_limit= 00:05:00	
 
 module purge
 module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
 #module load K80/default mkl/2017.0.098 cuda/7.5 CUDNN/5.1.3 intel-opencl/2016 python/2.7.12_ML
-python $HOME/MAI-DL/lab_1/code_lab1.1.py
+python code_lab1.1.py
 ```
 
 Make sure the paths in the launcher all point to your directories. "initialdir" indicates the source path for the execution, and the line "python code.py" should refer to the location of the file you wish to execute.
