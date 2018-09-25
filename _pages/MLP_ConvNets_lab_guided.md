@@ -90,7 +90,8 @@ Once you have a code you want to run (like the example code code_lab1.1.py), you
 # @ wall_clock_limit= 00:05:00	# limit of time
 
 module purge
-module load module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
+module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
+#module load K80/default mkl/2017.0.098 cuda/7.5 CUDNN/5.1.3 intel-opencl/2016 python/2.7.12_ML
 python $HOME/MAI-DL/lab_1/code_lab1.1.py
 ```
 
