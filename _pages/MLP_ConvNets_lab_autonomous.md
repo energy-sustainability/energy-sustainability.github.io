@@ -42,6 +42,8 @@ Follows a short list of freely available datasets to play with. You can find man
 - [textures] (https://www.robots.ox.ac.uk/~vgg/data/dtd/)
 - [wood] (www.ee.oulu.fi/~olli/Projects/Lumber.Grading.html)
 
+Choose this or other datasets depending on what you are trying to explore. Many/Few classes? Fine grained/General classes? Many/Few instances per class? Large/Small resolution?
+If you think your study is independent of these variables, its good to validate such assumption by running experiments on more than one dataset.
 
 <a name='tips'></a>
 # Tips
