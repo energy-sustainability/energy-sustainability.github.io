@@ -177,6 +177,19 @@ The PV-DM model take into consideration the word order within the documents, as 
 
 Doc2vec authors recommend to use a concatenation of both models for building paragraph vectors: Both the PV-DM and the PV-DBOW. However they consider the PV-DM to be the best model on its own.
 
+<a name='graphemb'></a>
+## Graph Embeddings
+
+The power of embeddings lies on its applicability. A good example are the graph embeddings methods, which focus on generating deep net representations of vertices, edges and graphs, using similar methods to the ones used to generate representations of text. A prime example is the Node2Vec algorithm [45], which, given a graph containing a set of vertices, essentially builds an embedding of each vertex based on its edges. There are many other graph embedding methods [47,48,49], but here we will only review this one due to its simplicity and similarity with text embeddings.
+
+Node2Vec [45] essentially transforms a graph into a corpus, so that models like skip-gram or bag-of-words can be applied to it. To generate such corpus, a set of random walks starting on each vertex are generated. These random walks represent the context, based on which the embedding is built.
+
+<div style="text-align:center">
+    <img src="/images/node2vec.png" width="800">
+</div>  
+ <div><p style="text-align: center;">Illustration of the Node2Vec model, from [46].</p></div>
+
+After the embedding is built, one can work with these vector representations for other purposes, such as clustering (community detection, in the graph mining lingo).
 
 
 <a name='imgemb'></a>
@@ -534,6 +547,16 @@ Authors demonstrate, for the first time, that a single deep learning model can j
 [43] [Vendrov, Ivan, et al. "Order-embeddings of images and language." arXiv preprint arXiv:1511.06361 (2015).](https://arxiv.org/abs/1511.06361)
 
 [44] [Kaiser, Lukasz, et al. "One Model To Learn Them All." arXiv preprint arXiv:1706.05137 (2017).](https://arxiv.org/pdf/1706.05137.pdf)
+
+[45] [node2vec: Scalable Feature Learning for Networks](https://arxiv.org/pdf/1607.00653.pdf)
+
+[46] [node2vec: Embeddings for Graph Data](https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef)
+
+[47] [Deepwalk: Online learning of social representations](https://arxiv.org/pdf/1403.6652)
+
+[48] [Learning deep representations for graph clustering.](http://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/viewFile/8527/8571)
+
+[49] [Deep Neural Networks for Learning Graph Representations.](http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12423/11715)
 
 ### Other uncited sources:
 
