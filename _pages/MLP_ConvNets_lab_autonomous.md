@@ -33,14 +33,14 @@ In this document there are a list of suggested questions you may consider to exp
 # Datasets
 Follows a short list of freely available datasets to play with. You can find many more online.
 
-- [mit6i7] (http://web.mit.edu/torralba/www/indoor.html)
-- [cub200] (http://www.vision.caltech.edu/visipedia/CUB-200.html)
-- [flowers102] (http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
-- [sdogs] (vision.stanford.edu/aditya86/StanfordDogs/)
-- [caltech101] (www.vision.caltech.edu/Image_Datasets/Caltech101/)
-- [food101] (://www.vision.ee.ethz.ch/datasets_extra/food-101 [mit6i7] (http://web.mit.edu/torralba/www/indoor.html)
-- [textures] (https://www.robots.ox.ac.uk/~vgg/data/dtd/)
-- [wood] (www.ee.oulu.fi/~olli/Projects/Lumber.Grading.html)
+- [mit67](http://web.mit.edu/torralba/www/indoor.html)
+- [cub200](http://www.vision.caltech.edu/visipedia/CUB-200.html)
+- [flowers102](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
+- [sdogs](vision.stanford.edu/aditya86/StanfordDogs/)
+- [caltech101](www.vision.caltech.edu/Image_Datasets/Caltech101/)
+- [food101](://www.vision.ee.ethz.ch/datasets_extra/food-101 [mit6i7] (http://web.mit.edu/torralba/www/indoor.html)
+- [textures](https://www.robots.ox.ac.uk/~vgg/data/dtd/)
+- [wood](www.ee.oulu.fi/~olli/Projects/Lumber.Grading.html)
 
 Choose this or other datasets depending on what you are trying to explore. Many/Few classes? Fine grained/General classes? Many/Few instances per class? Large/Small resolution?
 If you think your study is independent of these variables, its good to validate such assumption by running experiments on more than one dataset.
