@@ -14,6 +14,7 @@ Table of Contents:
         - [GloVe](#glove)
     - [Word Regularities](#regularities)
     - [Doc2vec](#doc2vec)
+- [Graph Embeddings](#graphemb)
 - [Image Embeddings](#imgemb)
     - [Single layer embeddings](#single-layer-emb)
         - [DeCAF](#decaf)
