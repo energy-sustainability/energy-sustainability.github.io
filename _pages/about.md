@@ -169,3 +169,4 @@ For the evaluation of the theoretical aspects of the course, we offer a list of 
 - [Basic concepts and cheatsheets on ML](https://stanford.edu/~shervine/teaching/cs-229.html)
 - [List of interesting papers with available code. Interesting for replicating their results and playing around on top.](https://github.com/zziz/pwc)
 - [A look at how many architectures and multimodalities are in fact the same basic operations: Feature-wise Linear Modulation or FiLM](https://distill.pub/2018/feature-wise-transformations/)
+- [Some details on the memory-related issues of Deep Learning](https://www.graphcore.ai/posts/why-is-so-much-memory-needed-for-deep-neural-networks)
