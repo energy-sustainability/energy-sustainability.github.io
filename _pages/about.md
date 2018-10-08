@@ -50,12 +50,12 @@ This course provides an applied approach to Deep Learning. The course is structu
 - 18/09 - FNN and CNN theory
 - 25/09 - FNN and CNN guided lab
 - 02/10 - FNN and CNN autonomous lab
-- 09/10 - RNN theory
-- 16/10 - RNN guided lab
-- 23/10 - RNN autonomous lab
-- 30/10 - Embedding spaces theory
-- 06/11 - Embedding spaces guided lab
-- 13/11 - Embedding spaces autonomous lab
+- 09/10 - Embedding spaces theory        
+- 16/10 - Embedding spaces guided lab    
+- 23/10 - Embedding spaces autonomous lab
+- 30/10 - RNN theory
+- 06/11 - RNN guided lab
+- 13/11 - RNN autonomous lab
 - 20/11 - High Performance aspects theory        
 - 27/11 - High Performance aspects guided lab    
 - 04/12 - High Performance aspects autonomous lab
@@ -67,8 +67,8 @@ This course provides an applied approach to Deep Learning. The course is structu
 
 Delivery dates for the labs (delivery must be made through the Raco site), are three weeks after the corresponding autonomous lab:
 - FNN/CNN 23/10
-- RNN 13/11
-- Embeddings 04/12 
+- Embeddings 13/11
+- RNN 04/12 
 - HPC4DL 12/01 
 
 
