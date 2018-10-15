@@ -33,8 +33,8 @@ def input_pipeline(image_files, batch_size):
 
 # Load the vgg16 architecture with pre-trained weights using ImageNet2012 dataset.
 base_model = VGG16(weights='imagenet')
-print 'Layers of vgg16 architecture:', [x.name for x in base_model.layers]
-print 'We are building the embedding using activations from layer fc2 (i.e., second fully-connected).'
+print('Layers of vgg16 architecture:', [x.name for x in base_model.layers])
+print('We are building the embedding using activations from layer fc2 (i.e., second fully-connected).')
 sys.stdout.flush()
 # Define a custom model that given an input, outputs activations from requested layer.
 model = Model(input=base_model.input, output=base_model.get_layer('fc2').output)
@@ -43,7 +43,7 @@ model = Model(input=base_model.input, output=base_model.get_layer('fc2').output)
 dataset_emb = np.zeros((0,4096))
 dataset_lab = []
 
-print 'Processing image embeddings through batches of 10 images per step.'
+print('Processing image embeddings through batches of 10 images per step.')
 sys.stdout.flush()
 # Create a list containing all image_paths. 
 image_files = glob('~/mit67_img_train/*/*')
@@ -62,12 +62,12 @@ for x_batch, y_batch in input_pipeline(image_files, 10):
     dataset_lab += y_batch
 
     step += 1
-    print 'step: {s}/{tot} in {t}s'.format(s=step, tot=tot, t=time.time()-t0)
+    print('step: {s}/{tot} in {t}s'.format(s=step, tot=tot, t=time.time()-t0))
     sys.stdout.flush()
 
-print 'Dataset embedding shape:', dataset_emb.shape
-print 'Length of dataset labels', len(dataset_lab)
-print 'Saving dataset embeddings into mit67_embeddings.npz file...'
+print('Dataset embedding shape:', dataset_emb.shape)
+print('Length of dataset labels', len(dataset_lab))
+print('Saving dataset embeddings into mit67_embeddings.npz file...')
 sys.stdout.flush()
 np.savez('mit67_embeddings.npz', embeddings=dataset_emb, labels=dataset_lab)
 

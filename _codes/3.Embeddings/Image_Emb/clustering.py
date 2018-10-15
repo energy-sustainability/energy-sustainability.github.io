@@ -11,7 +11,7 @@ embeddings = obj['embeddings']
 # Set up the subset of labels to visualize.
 n_labels = 5
 _uniq = np.unique(labels)[:n_labels]
-print 'The {n} labels selected to visualize:'.format(n=n_labels), _uniq
+print('The {n} labels selected to clusterize:'.format(n=n_labels), _uniq)
 
 # Create the embeddings matrix (and its corresponding labels list)
 # containing instances belonging to labels in the previous subset.
@@ -30,4 +30,4 @@ reduced_emb = PCA(n_components=100).fit_transform(subsets_emb)
 # a metric (e.g., Normalized Mutual Information).
 pred_labels = KMeans(n_clusters=n_labels, random_state=0).fit_predict(reduced_emb)
 nmi = NMI(true_labels, pred_labels)
-print 'NMI score:', nmi
+print('NMI score:', nmi)

@@ -21,7 +21,7 @@ f.close()
 #Compute distances among first X words (depending on your machine)
 max_words = 30
 from sklearn.metrics.pairwise import pairwise_distances
-mat = pairwise_distances(embeddings_index.values()[:max_words])
+mat = pairwise_distances(list(embeddings_index.values())[:max_words])
 
 #Replace self distances from 0 to inf (to use argmin)
 np.fill_diagonal(mat, np.inf)
@@ -31,8 +31,8 @@ min_0 = np.argmin(mat,axis=0)
 
 #Save the pairs to a file
 f_out = open('similarity_pairs_dim'+embeddings_size+'_first'+str(max_words)+'.txt','w')
-for i,item in enumerate(embeddings_index.keys()[:max_words]):
-    f_out.write(str(item)+' '+str(embeddings_index.keys()[min_0[i]])+'\n')
+for i,item in enumerate(list(embeddings_index.keys())[:max_words]):
+    f_out.write(str(item)+' '+str(list(embeddings_index.keys())[min_0[i]])+'\n')
 
 ###
 ###Test the "king - man + woman = queen" analogy
@@ -42,7 +42,7 @@ for i,item in enumerate(embeddings_index.keys()[:max_words]):
 embedding_analogy = embeddings_index['king'] - embeddings_index['man'] + embeddings_index['woman']
 #Find distances with the rest of the words
 analogy_distances = np.empty(len(embeddings_index))
-for i,item in enumerate(embeddings_index.values()):
+for i,item in enumerate(list(embeddings_index.values())):
     analogy_distances[i] = pairwise_distances(embedding_analogy.reshape(1, -1),item.reshape(1, -1))
 #Print top 10 results
-print [embeddings_index.keys()[i] for i in analogy_distances.argsort()[:10]]
+print [list(embeddings_index.keys())[i] for i in analogy_distances.argsort()[:10]]
