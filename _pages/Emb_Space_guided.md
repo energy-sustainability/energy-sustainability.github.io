@@ -14,10 +14,12 @@ Table of Contents:
 
 The codes introduced in this guided lab can be found [here](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/3.Embeddings)
 
-For getting an interactive session with MinoTauro:
+For getting an interactive session with MinoTauro in a node with GPU:
 ```shell
 mnsh -k80 -g
 ```
+
+If you dont need a GPU, remove the -k80
 
 For running in MinoTauro, the following modules are needed for python 2.7:
 ```shell

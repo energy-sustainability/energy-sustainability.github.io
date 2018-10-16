@@ -45,4 +45,4 @@ analogy_distances = np.empty(len(embeddings_index))
 for i,item in enumerate(embeddings_index.values()):
     analogy_distances[i] = pairwise_distances(embedding_analogy.reshape(1, -1),item.reshape(1, -1))
 #Print top 10 results
-print [embeddings_index.keys()[i] for i in analogy_distances.argsort()[:10]]
+print([embeddings_index.keys()[i] for i in analogy_distances.argsort()[:10]])
