@@ -68,8 +68,8 @@ This course provides an applied approach to Deep Learning. The course is structu
 Delivery dates for the labs (delivery must be made through the Raco site), are three weeks after the corresponding autonomous lab:
 - FNN/CNN 23/10
 - Embeddings 13/11
-- RNN 04/12 
-- HPC4DL 12/01 
+- RNN 18/12 
+- HPC4DL 19/01 
 
 
 <a name='theory'></a>
