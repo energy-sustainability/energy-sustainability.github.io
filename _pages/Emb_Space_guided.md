@@ -16,16 +16,10 @@ The codes introduced in this guided lab can be found [here](https://github.com/U
 
 For getting an interactive session with MinoTauro in a node with GPU:
 ```shell
-mnsh -g
+mnsh -k80 -g
 ```
 
-<<<<<<< HEAD
-If you dont need a GPU, remove the -k80
-
-For running in MinoTauro, the following modules are needed for python 2.7:
-=======
 For running in MinoTauro, the following modules are needed for python 3.6:
->>>>>>> 109a7394bc9c3f94716f086cd67c0f556f3b261d
 ```shell
 module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
 ```
@@ -55,7 +49,7 @@ embeddings_index = {}
 #These can be dowloaded from https://nlp.stanford.edu/projects/glove/
 #e.g., wget http://nlp.stanford.edu/data/glove.6B.zip
 embeddings_size = "300"
-f = open(os.path.join('.', 'glove.6B.'+embeddings_size+'d.txt'))
+f = open(os.path.join('.', 'glove.6B.'+embeddings_size+'d.txt'),encoding="utf-8")
 
 #Process file and load into structure
 for line in f:

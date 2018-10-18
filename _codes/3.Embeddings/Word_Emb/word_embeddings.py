@@ -8,7 +8,7 @@ embeddings_index = {}
 #These can be dowloaded from https://nlp.stanford.edu/projects/glove/
 #e.g., wget http://nlp.stanford.edu/data/glove.6B.zip
 embeddings_size = "300"
-f = open(os.path.join('.', 'glove.6B.'+embeddings_size+'d.txt'))
+f = open(os.path.join('.', 'glove.6B.'+embeddings_size+'d.txt'), encoding="utf-8")
 
 #Process file and load into structure
 for line in f:
