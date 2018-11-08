@@ -75,6 +75,15 @@ By applying the backpropagation process iteratively (forward pass of the input, 
 
 With this new training methodology, research on ANN became active again. LeCun et. al. [11] developed a digit recognition system using data from the US Postal Service in 1989, and showed how ANN could be used to solve complex practical problems. LeCun's system included a layer of convolutional neurons, which had been previously proposed by Fukushima in 1980 [12].
 
+<a name='training_cycle'></a>
+
+Through backpropagation, the training cycle is reduced to 3 basic steps. First, feedforward the input to predict its label. Second, compute the error made by the network. Third, backpropagate the error, and adjust the weights accordingly.
+
+<div style="text-align:center">
+    <img src="/images/training_inference1.png" width="500">
+</div>
+<p style="text-align: center;">Scheme of the training and inference processes. From [48].</p>
+
 <a name='activations'></a>
 ### Activation Functions
 
@@ -298,6 +307,31 @@ The AlexNet architecture is composed by 5 pairs of conv-pooling layers, with 3 f
 
 On top of the last fully-connected layer, either a Softmax or a SVM is placed, to perform the final classification. Other relevant CNN that follow this same scheme are the VGG16/19 [36] (by Oxford VGG research group), the Inception (first called GoogLeNet [37], by Google) and the ResNet [38] (by Microsoft).
 
+#### Fully Convolutional Networks
+
+CNNs with a fully connected layers are bounded to a fixed input size, as these neurons expect a fixed number of inputs value. To be able to process inputs of varying size, fully convolutional networks are currently popular. By replacing fully connected neurons, by convolutional neurons with kernels covering the whole input, one obtains a network analogous to a traditional CNN, which does not limit input size.
+
+#### ResNets and Inception
+
+Beyond the traditional architectures, two of the most significant contributions are ResNet and Inception. On its own way, these provide the network with the hability to chose over a wider range of patterns, without increasing the complexity of the model.
+
+<div style="text-align:center">
+    <img src="/images/inception.png" width="550">
+	</div> 
+<p style="text-align: center;">Inception block design, from [37]. Enables learning filters of all sizes.</p>
+
+<div style="text-align:center">
+    <img src="/images/resnet.png" width="550">
+	</div> 
+<p style="text-align: center;">ResNet residual block design, from [38]. Enables learning the identity function, and training networks of any depth.</p>
+
+
+<a name='representations'></a>
+### Deep Nets and Representations
+
+Deep neural networks are representation learning techniques. Their basic purpose is to generate representations that can be used afterwards by another component, such as a classifier (e.g., softmax). The power of deep nets lies within its internal layers, which generate powerful data descriptors, such that a posterior process can make use of those for some task. This is the reason of the popularity of deep nets. Their applicability to a huge amount of tasks.
+
+
 
 
 <a name='inside'></a>
@@ -489,6 +523,8 @@ There are many other applications of CNNs. In combination with reinforcement lea
 [46] [http://blog.mrtanke.com/2016/10/24/An-overview-of-gradient-descent-optimization-algorithms/](http://blog.mrtanke.com/2016/10/24/An-overview-of-gradient-descent-optimization-algorithms/)
 
 [47] [https://medium.com/@erikhallstrm/backpropagation-from-the-beginning-77356edf427d](https://medium.com/@erikhallstrm/backpropagation-from-the-beginning-77356edf427d)
+
+[48] [https://devblogs.nvidia.com/wp-content/uploads/2015/08/training_inference1.png](https://devblogs.nvidia.com/wp-content/uploads/2015/08/training_inference1.png)
 
 ### Other uncited sources:
 

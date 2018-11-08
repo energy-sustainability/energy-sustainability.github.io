@@ -1,13 +1,13 @@
 from __future__ import division
 import keras
-print 'Using Keras version', keras.__version__
+print( 'Using Keras version', keras.__version__)
 from keras.datasets import mnist
 #Load the MNIST dataset, already provided by Keras
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 #Check sizes of dataset
-print 'Number of train examples', x_train.shape[0]
-print 'Size of train examples', x_train.shape[1:]
+print( 'Number of train examples', x_train.shape[0])
+print( 'Size of train examples', x_train.shape[1:])
 
 #Adapt the data as an input of a fully-connected (flatten to 1D)
 x_train = x_train.reshape(60000, 784)
@@ -78,7 +78,7 @@ Y_pred = nn.predict(x_test)
 #Assign most probable label
 y_pred = np.argmax(Y_pred, axis=1)
 #Plot statistics
-print 'Analysis of results' 
+print( 'Analysis of results' )
 target_names = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 print(classification_report(np.argmax(y_test,axis=1), y_pred,target_names=target_names))
 print(confusion_matrix(np.argmax(y_test,axis=1), y_pred))

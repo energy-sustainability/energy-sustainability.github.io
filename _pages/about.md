@@ -50,12 +50,12 @@ This course provides an applied approach to Deep Learning. The course is structu
 - 18/09 - FNN and CNN theory
 - 25/09 - FNN and CNN guided lab
 - 02/10 - FNN and CNN autonomous lab
-- 09/10 - RNN theory
-- 16/10 - RNN guided lab
-- 23/10 - RNN autonomous lab
-- 30/10 - Embedding spaces theory
-- 06/11 - Embedding spaces guided lab
-- 13/11 - Embedding spaces autonomous lab
+- 09/10 - Embedding spaces theory        
+- 16/10 - Embedding spaces guided lab    
+- 23/10 - Embedding spaces autonomous lab
+- 30/10 - RNN theory
+- 06/11 - RNN guided lab
+- 13/11 - RNN autonomous lab
 - 20/11 - High Performance aspects theory        
 - 27/11 - High Performance aspects guided lab    
 - 04/12 - High Performance aspects autonomous lab
@@ -67,9 +67,9 @@ This course provides an applied approach to Deep Learning. The course is structu
 
 Delivery dates for the labs (delivery must be made through the Raco site), are three weeks after the corresponding autonomous lab:
 - FNN/CNN 23/10
-- RNN 13/11
-- Embeddings 04/12 
-- HPC4DL 12/01 
+- Embeddings 13/11
+- RNN 18/12 
+- HPC4DL 19/01 
 
 
 <a name='theory'></a>
@@ -88,6 +88,7 @@ The guided laboratory provides working code that can serve as a starting point f
 
 The autonomous laboratory session is intended for students to experiment with Deep Learning methods, and draw their own conclusions. On each autonomous laboratory, a set of example experiments will be detailed, but students are strongly encouraged to define their own experiments based on their own curiosity.
 
+For running the lab experiments, students will be given access to computational resources. However, these resources are shared with other people though a queue system. Its important to maxime the use of your resources, as the priority of your jobs will decrease as you consume your quota. Try to adjust the amount of resources you need for every job (both in number of nodes and in time). Plan your experiments in advance. Dont wait until 2 days before the delivery of the report to submit jobs, as these may be queued for a while.
 
 <a name='overlap'></a>
 ### Overlap with other courses
@@ -163,5 +164,10 @@ For the evaluation of the theoretical aspects of the course, we offer a list of 
 ### Stuff to read
 
 - [A post describing the ideas behind ResNet, Inception and Xception is simple terms](https://towardsdatascience.com/an-intuitive-guide-to-deep-network-architectures-65fdc477db41)
+- [A post reviewing the most relevant architectures proposed, and their contributions](https://towardsdatascience.com/neural-network-architectures-156e5bad51ba)
 - [Troubling Trends in Machine Learning Scholarship](http://approximatelycorrect.com/2018/07/10/troubling-trends-in-machine-learning-scholarship/) A position paper regarding frequent problems with current machine learning papers, and tips on how to avoid them.
 - [Differences between L1 and L2 as Loss Function and Regularization](http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/)
+- [Basic concepts and cheatsheets on ML](https://stanford.edu/~shervine/teaching/cs-229.html)
+- [List of interesting papers with available code. Interesting for replicating their results and playing around on top.](https://github.com/zziz/pwc)
+- [A look at how many architectures and multimodalities are in fact the same basic operations: Feature-wise Linear Modulation or FiLM](https://distill.pub/2018/feature-wise-transformations/)
+- [Some details on the memory-related issues of Deep Learning](https://www.graphcore.ai/posts/why-is-so-much-memory-needed-for-deep-neural-networks)

@@ -14,26 +14,23 @@ Table of Contents:
 
 The codes introduced in this guided lab can be found [here](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/3.Embeddings)
 
-For getting an interactive session with MinoTauro:
+For getting an interactive session with MinoTauro in a node with GPU:
 ```shell
 mnsh -k80 -g
 ```
 
-For running in MinoTauro, the following modules are needed for python 2.7:
+For running in MinoTauro, the following modules are needed for python 3.6:
 ```shell
-module purge; module load K80 cuda/7.5 mkl/2017.0.098 CUDNN/5.1.3 intel-opencl/2016 python/2.7.12_ML
+module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
 ```
-
-And for python 3.6
-```shell
-module purge; module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
-```
-
 
 <a name='basic'></a>
 ## Basic word2vec experiments
 
-Training word2vec requires the processing of huge amounts of text. Although word2vec defines a very shallow network (i.e., it only has one hidden layer), training it takes hours. To experiment with word embeddings, we will use pre-trained embeddings provided for GloVe. These can be downloaded from [here](https://nlp.stanford.edu/projects/glove/). There are several embeddings using different corpus. Download one or all of them.
+Training word2vec requires the processing of huge amounts of text. Although word2vec defines a very shallow network (i.e., it only has one hidden layer), training it takes hours. To experiment with word embeddings, we will use pre-trained embeddings provided for GloVe. These can be downloaded from [here](https://nlp.stanford.edu/projects/glove/). There are several embeddings using different corpus. Download one or all of them. Get a sample from here:
+```shell
+scp /home/bsc28/bsc28535/MAI-DL_lab_emb/glove.6B.300d.txt .
+```
 
 Since we are not going to train the word embeddings, GPUs are not necessary for these experiments. You can still use Minotauro for executing your jobs, but you can also do it on your personal computer. Take into account that these codes are not parallelized. For efficient use of Minotauro, consider parallelizing the code using standard Python libraries (see the multiprocessing module).
 
@@ -52,7 +49,7 @@ embeddings_index = {}
 #These can be dowloaded from https://nlp.stanford.edu/projects/glove/
 #e.g., wget http://nlp.stanford.edu/data/glove.6B.zip
 embeddings_size = "300"
-f = open(os.path.join('.', 'glove.6B.'+embeddings_size+'d.txt'))
+f = open(os.path.join('.', 'glove.6B.'+embeddings_size+'d.txt'),encoding="utf-8")
 
 #Process file and load into structure
 for line in f:
@@ -72,7 +69,7 @@ With the embeddings loaded, we can now compute distances. Let's find the most si
 #Compute distances among first X words
 max_words = 10000
 from sklearn.metrics.pairwise import pairwise_distances
-mat = pairwise_distances(embeddings_index.values()[:max_words])
+mat = pairwise_distances(list(embeddings_index.values())[:max_words])
 
 #Replace self distances from 0 to inf (to use argmin)
 np.fill_diagonal(mat, np.inf)
@@ -82,8 +79,8 @@ min_0 = np.argmin(mat,axis=0)
 
 #Save the pairs to a file
 f_out = open('similarity_pairs_dim'+embeddings_size+'_first'+str(max_words)+'.txt','w')
-for i,item in enumerate(embeddings_index.keys()[:max_words]):
-    f_out.write(str(item)+' '+str(embeddings_index.keys()[min_0[i]])+'\n')
+for i,item in enumerate(list(embeddings_index.keys())[:max_words]):
+    f_out.write(str(item)+' '+str(list(embeddings_index.keys())[min_0[i]])+'\n')
 ```
 
 ### Testing the "king - man + woman = queen" analogy
@@ -98,7 +95,7 @@ analogy_distances = np.empty(len(embeddings_index))
 for i,item in enumerate(embeddings_index.values()):
     analogy_distances[i] = pairwise_distances(embedding_analogy.reshape(1, -1),item.reshape(1, -1))
 #Print top 10 results
-print [embeddings_index.keys()[i] for i in analogy_distances.argsort()[:10]]
+print([list(embeddings_index.keys())[i] for i in analogy_distances.argsort()[:10]])
 ```
 
 Can you come up with any other analogy?
@@ -113,6 +110,11 @@ Processing image embeddings of a visual dataset only requires a dataset of image
 wget https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels.h5
 scp vgg16_weights_tf_dim_ordering_tf_kernels.h5 USERNAME@dt01.bsc.es:.keras/models/.
 ```
+ or from MT:
+```
+cp /home/bsc28/bsc28535/.keras/models/vgg16_weights_tf_dim_ordering_tf_kernels.h5 ./.keras/models
+```
+
 
 We will work with the MIT-67 dataset, an indoor scene recognition task. We are going to convert all image representations to embedding representations encoding the visual patterns based on the language learnt by the model. Before processing images from MIT-67, we will have to download its training subset, copy it into the GPFS system and decompress it:
 
@@ -122,10 +124,15 @@ scp mit67_img_train.tar.gz USERNAME@dt01.bsc.es:.
 ssh USERNAME@mt1.bsc.es
 tar -xzvf mit67_img_train.tar.gz
 ```
+or from MT:
+```
+cp -r /home/bsc28/bsc28535/MAI-DL_lab_emb/mit67_img_train .
+```
+
 
 ### Converting images to image embeddings
 
-Converting images to embeddings from single layer with Keras is straigh forward. We have to load the pre-trained weights into the vgg16 architecture to input a batch of images and obtain activations at the previous to last fully-connected layer:
+Converting images to embeddings from single layer with Keras is straight forward. We have to load the pre-trained weights into the vgg16 architecture to input a batch of images and obtain activations at the previous to last fully-connected layer:
 
 ```python
 from keras.applications.vgg16 import VGG16
@@ -167,7 +174,7 @@ for x_batch, y_batch in input_pipeline(image_files, 10):
     dataset_lab += y_batch
 
     step += 1
-    print 'step: {s}/{tot} in {t}s'.format(s=step, tot=tot, t=time.time()-t0)
+    print('step: {s}/{tot} in {t}s'.format(s=step, tot=tot, t=time.time()-t0))
     sys.stdout.flush()
 ```
 
@@ -197,7 +204,7 @@ embeddings = obj['embeddings']
 # Set up the subset of labels to visualize.
 n_labels = 5
 _uniq = np.unique(labels)[:n_labels]
-print 'The {n} labels selected to visualize:'.format(n=n_labels), _uniq
+print('The {n} labels selected to visualize:'.format(n=n_labels), _uniq)
 
 # Create the embeddings matrix (and its corresponding labels list) 
 # containing instances belonging to labels in the previous subset.
@@ -209,7 +216,7 @@ for idx, _lab in enumerate(_uniq):
     subsets_emb = np.concatenate((subsets_emb, part_emb))
     lab_range[_lab] = [offset, offset+part_emb.shape[0]]
     offset += part_emb.shape[0]
-print 'subsets_emb shape:', subsets_emb.shape
+print('subsets_emb shape:', subsets_emb.shape)
 
 # Apply a dimensionality reduction technique to visualize 2 dimensions.
 vis_matrix = TSNE(n_components=2).fit_transform(subsets_emb)
@@ -247,7 +254,7 @@ embeddings = obj['embeddings']
 # Set up the subset of labels to visualize.
 n_labels = 5
 _uniq = np.unique(labels)[:n_labels]
-print 'The {n} labels selected to visualize:'.format(n=n_labels), _uniq
+print('The {n} labels selected to visualize:'.format(n=n_labels), _uniq)
 
 # Create the embeddings matrix (and its corresponding labels list)
 # containing instances belonging to labels in the previous subset.
@@ -266,7 +273,7 @@ reduced_emb = PCA(n_components=100).fit_transform(subsets_emb)
 # a metric (e.g., Normalized Mutual Information).
 pred_labels = KMeans(n_clusters=n_labels, random_state=0).fit_predict(reduced_emb)
 nmi = NMI(true_labels, pred_labels)
-print 'NMI score:', nmi
+print('NMI score:', nmi)
 ```
 
 Clustering is completely unsupervised. Algorithm consider that two images should be in the same cluster based on a prior encoded in the algorithm. Are you able to apply a classification on the data instead of a clustering? Use an [SVM](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) model from the sklearn python tool.

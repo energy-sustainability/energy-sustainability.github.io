@@ -27,7 +27,7 @@ Currently there are several deep learning frameworks available for developers. T
 - CNTK (Microsoft)
 - TensorFlow (Google)
 - Theano
-- Torch
+- Torch/PyTorch
 - Keras
 
 Chosing one or another depends on the developer experience and the nature of the problem. In this course we will use Keras, since it is very easy to use and provides many functionalities that allows uers to start training networks in very short time. Keras is written in Python and in the background it may use TensorFlow, Theano or CNTK.
@@ -79,24 +79,23 @@ Once you have a code you want to run (like the example code code_lab1.1.py), you
 ```
 #!/bin/bash
 # @ job_name = code_lab1.2
-# @ initialdir = /home/nct01/nct01025/	# source path for the execution [optional]
-# @ class = training	# queue where to put the job
-# @ output= %j.out 	# name format of the output file
-# @ error= %j.err 	# name format of the output file
+# @ initialdir = /home/nct01/nct01025/	
+# @ class = training	
+# @ output= %j.out 	
+# @ error= %j.err 	
 # @ total_tasks= 1 
-# @ gpus_per_node= 1	# number of gpus
+# @ gpus_per_node= 1	
 # @ cpus_per_task= 1
 # @ features= k80
-# @ wall_clock_limit= 00:05:00	# limit of time
+# @ wall_clock_limit= 00:05:00	
 
 module purge
-module load merovingian
-# merovingian2712 will be the equivalent to call python in a normal environment
-# the parameter is the file you want to execute
-merovingian2712 $HOME/MAI-DL/lab_1/code_lab1.1.py
+module load K80/default impi/2018.1 mkl/2018.1 cuda/8.0 CUDNN/7.0.3 python/3.6.3_ML
+#module load K80/default mkl/2017.0.098 cuda/7.5 CUDNN/5.1.3 intel-opencl/2016 python/2.7.12_ML
+python code_lab1.1.py
 ```
 
-Make sure the paths in the launcher all point to your directories. "initialdir" indicates the source path for the execution, and the line "merovingian2712 code.py" should refer to the location of the file you wish to execute.
+Make sure the paths in the launcher all point to your directories. "initialdir" indicates the source path for the execution, and the line "python code.py" should refer to the location of the file you wish to execute.
 
 The other main parameter of the launcher is the wall_clock_limit. Its important to optimize resources, so try to set limits not too large. Keep in mind that the job will be cancelled once the limit is reached, even if the job is still running. Longer jobs have lower priority, and will take more time to get out of the queue.
 
@@ -128,7 +127,7 @@ Hence, since from Minotauro we have not access to Internet we will download the 
 </span>
 ```python
 # from our pc
-wget https://s3.amazonaws.com/img-datasets/mnist.pkl.gz
+wget https://s3.amazonaws.com/img-datasets/mnist.npz
 scp mnist.pkl.gz <your_user>@dt01.bsc.es:/<your_home>/.keras/datasets/
 # if the copy fails check that the folder exists, if not create it
 ```
@@ -322,7 +321,7 @@ nn.add(Dense(128, activation='relu'))
 nn.add(Dense(10, activation='softmax'))
 ```
 
-This simple model can solve the MNIST classification problem with an accuracy over 98%. For a more complicated problem, try the CIFAR10 dataset (see the [dataset webpage](https://www.cs.toronto.edu/~kriz/cifar.html) to analyze the type of problem at hand.
+This simple model can solve the MNIST classification problem with an accuracy over 98%. For a more complicated problem, try the CIFAR10 dataset (see the [dataset webpage](https://www.cs.toronto.edu/~kriz/cifar.html) to analyze the type of problem at hand. Download it from here: https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 ```python
 from keras.datasets import cifar10
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
