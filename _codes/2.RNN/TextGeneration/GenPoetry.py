@@ -6,7 +6,7 @@ GenPoetry
 
 :Description: GenPoetry
 
-    
+    Generates random poetry from a saved model
 
 :Authors: bejar
     
