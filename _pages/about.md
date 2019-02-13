@@ -8,6 +8,8 @@ redirect_from:
     - /about.html
 ---
 
+# WARNING: Data has not yet been updated for the spring semester starting on February 2018. It will be done soon.
+
 The Table of Contents:
 
 - [About](#about)
