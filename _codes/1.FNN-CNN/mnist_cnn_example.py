@@ -24,15 +24,34 @@ from keras.utils import np_utils
 y_train = np_utils.to_categorical(y_train, 10)
 y_test = np_utils.to_categorical(y_test, 10)
 
+
+#Find which format to use (depends on the backend), and compute input_shape
+from keras import backend as K
+#MNIST resolution
+img_rows, img_cols, channels = 28, 28, 1
+
+if K.image_data_format() == 'channels_first':
+    x_train = x_train.reshape(x_train.shape[0], channels, img_rows, img_cols)
+    x_test = x_test.reshape(x_test.shape[0], channels, img_rows, img_cols)
+    input_shape = (1, img_rows, img_cols)
+else:
+    x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, channels)
+    x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, channels)
+    input_shape = (img_rows, img_cols, 1)
+
 #Define the NN architecture
 from keras.models import Sequential
-from keras.layers import Dense, Activation
+from keras.layers import Dense, Activation, Conv2D, MaxPooling2D, Flatten
 #Two hidden layers
 nn = Sequential()
-nn.add(Dense(64,activation='relu',input_shape=(784,)))
-nn.add(Dense(32,activation='relu'))
-nn.add(Dense(32,activation='relu'))
+nn.add(Conv2D(64, 3, 3, activation='relu', input_shape=input_shape))
+nn.add(MaxPooling2D(pool_size=(2, 2)))
+nn.add(Conv2D(32, 3, 3, activation='relu'))
+nn.add(MaxPooling2D(pool_size=(2, 2)))
+nn.add(Flatten())
+nn.add(Dense(16, activation='relu'))
 nn.add(Dense(10, activation='softmax'))
+
 
 #Model visualization
 #We can plot the model by using the ```plot_model``` function. We need to install *pydot, graphviz and pydot-ng*.
@@ -43,7 +62,7 @@ nn.add(Dense(10, activation='softmax'))
 nn.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #Start training
-history = nn.fit(x_train,y_train,batch_size=128,epochs=200)
+history = nn.fit(x_train,y_train,batch_size=128,epochs=20, validation_split=0.15)
 
 #Evaluate the model with test set
 score = nn.evaluate(x_test, y_test, verbose=0)
@@ -56,19 +75,21 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 #Accuracy plot
 plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
-plt.legend(['train'], loc='upper left')
-plt.savefig('mnist_accuracy.pdf')
+plt.legend(['train','val'], loc='upper left')
+plt.savefig('mnist_cnn_accuracy.pdf')
 plt.close()
 #Loss plot
 plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
 plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
-plt.legend(['train'], loc='upper left')
-plt.savefig('mnist_loss.pdf')
+plt.legend(['train','val'], loc='upper left')
+plt.savefig('mnist_cnn_loss.pdf')
 
 #Confusion Matrix
 from sklearn.metrics import classification_report,confusion_matrix

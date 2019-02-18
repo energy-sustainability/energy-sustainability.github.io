@@ -29,9 +29,9 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation
 #Two hidden layers
 nn = Sequential()
-nn.add(Dense(128,activation='relu',input_shape=(784,)))
-nn.add(Dense(64,activation='relu'))
-nn.add(Dense(64,activation='relu'))
+nn.add(Dense(64,activation='relu',input_shape=(784,)))
+nn.add(Dense(32,activation='relu'))
+nn.add(Dense(32,activation='relu'))
 nn.add(Dense(10, activation='softmax'))
 
 #Model visualization
@@ -43,7 +43,7 @@ nn.add(Dense(10, activation='softmax'))
 nn.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #Start training
-history = nn.fit(x_train,y_train,batch_size=128,nb_epoch=20)
+history = nn.fit(x_train,y_train,batch_size=128,epochs=20)
 
 #Evaluate the model with test set
 score = nn.evaluate(x_test, y_test, verbose=0)
@@ -60,7 +60,7 @@ plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.legend(['train'], loc='upper left')
-plt.savefig('model_accuracy.pdf')
+plt.savefig('mnist_fnn_accuracy.pdf')
 plt.close()
 #Loss plot
 plt.plot(history.history['loss'])
@@ -68,7 +68,7 @@ plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train'], loc='upper left')
-plt.savefig('model_loss.pdf')
+plt.savefig('mnist_fnn_loss.pdf')
 
 #Confusion Matrix
 from sklearn.metrics import classification_report,confusion_matrix
@@ -87,7 +87,7 @@ print(confusion_matrix(np.argmax(y_test,axis=1), y_pred))
 from keras.models import model_from_json
 nn_json = nn.to_json()
 with open('nn.json', 'w') as json_file:
-    json_file.write(nn_json)
+        json_file.write(nn_json)
 weights_file = "weights-MNIST_"+str(score[1])+".hdf5"
 nn.save_weights(weights_file,overwrite=True)
 
@@ -97,4 +97,3 @@ nn_json = json_file.read()
 json_file.close()
 nn = model_from_json(nn_json)
 nn.load_weights(weights_file)
-
