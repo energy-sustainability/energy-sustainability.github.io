@@ -118,7 +118,7 @@ The experimental evaluation will be based on reports written by the student for 
 Feedforward Nets and Conv Nets (lecturer: Dario Garcia)
 - [Theory](mlp-convnets-theory/)
 - [Lab guided](mlp-convnets-lab-guided/)
-- [Lab autonomous](mlp-convnets-lab-autonomous/)
+- [Lab autonomous](mlp-convnets-lab-guided/)
 
 
 <a name='rnn_nets'></a>
