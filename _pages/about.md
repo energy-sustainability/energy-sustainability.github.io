@@ -50,18 +50,18 @@ This course provides an applied approach to Deep Learning. The course is structu
 - 15/02/19	FNN-CNN Theory	
 - 22/02/19	FNN-CNN Guid. Lab	
 - 01/03/19	FNN-CNN Aut. Lab	
-- 08/03/19	RNN Theory	
-- 15/03/19	RNN Guid. Lab	
-- 22/03/19	RNN Aut. Lab	Delivery 1st lab
-- 29/03/19	Emb. Theory	
-- 05/04/19	Emb. Guid. Lab	
-- 12/04/19	Emb. Aut. Lab	Delivery 2nd lab
-- 26/04/19	HPC-DL Theory	
-- 10/05/19	HPC-DL Guid. Lab	Delivery 3rd lab
-- 17/05/19	HPC-DL Aut. Lab	
+- 08/03/19	HPC-DL Theory	
+- 15/03/19	HPC-DL Guid. Lab	
+- 22/03/19	HPC-DL Aut. Lab	(Delivery 1st lab)
+- 29/03/19	RNN Theory	
+- 05/04/19	RNN Guid. Lab	
+- 12/04/19	RNN Aut. Lab	(Delivery 2nd lab)
+- 26/04/19	Emb. Theory	
+- 10/05/19	Emb. Guid. Lab	(Delivery 3rd lab)
+- 17/05/19	Emb. Aut. Lab	
 - 24/05/19	Presentation of theoretical works 1	
 - 31/05/19	Presentation of theoretical works 2	
-- 07/06/19	Presentation of theoretical works 3	Delivery 4th lab
+- 07/06/19	Presentation of theoretical works 3	(Delivery 4th lab)
 - 14/06/19	Presentation of theoretical works 4	
 
 
