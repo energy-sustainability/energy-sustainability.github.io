@@ -50,12 +50,12 @@ This course provides an applied approach to Deep Learning. The course is structu
 - 15/02/19	FNN-CNN Theory	
 - 22/02/19	FNN-CNN Guid. Lab	
 - 01/03/19	FNN-CNN Aut. Lab	
-- 08/03/19	Emb. Theory	
-- 15/03/19	Emb. Guid. Lab	
-- 22/03/19	Emb. Aut. Lab	(Delivery 1st lab)
-- 29/03/19	RNN Theory	
-- 05/04/19	RNN Guid. Lab	
-- 12/04/19	RNN Aut. Lab	(Delivery 2nd lab)
+- 08/03/19	RNN Theory	
+- 15/03/19	RNN Guid. Lab	
+- 22/03/19	RNN Aut. Lab	(Delivery 1st lab)
+- 29/03/19	Emb. Theory	
+- 05/04/19	Emb. Guid. Lab	
+- 12/04/19	Emb. Aut. Lab	(Delivery 2nd lab)
 - 26/04/19	HPC-DL Theory	
 - 10/05/19	HPC-DL Guid. Lab	(Delivery 3rd lab)	
 - 17/05/19	HPC-DL Aut. Lab	
@@ -116,20 +116,20 @@ Feedforward Nets and Conv Nets (lecturer: Dario Garcia)
 
 <a name='rnn_nets'></a>
 #### Lesson 2
-Embedding spaces (lecturer: Dario Garcia)
-
-- [Theory](emb-space-theory)
-- [Lab guided](embedding-spaces-lab-guided)
-- [Lab autonomous](embedding-spaces-lab-autonomous)
-
-
-<a name='embeddings'></a>
-#### Lesson 3
 Recurrent Neural Networks (lecturer: Javier Bejar)
 
 - [Theory](rnn-theory)
 - [Lab guided](rnn-lab-guided)
 - [Lab autonomous](rnn-lab-autonomous)
+
+
+<a name='embeddings'></a>
+#### Lesson 3
+Embedding spaces (lecturer: Dario Garcia)
+
+- [Theory](emb-space-theory)
+- [Lab guided](embedding-spaces-lab-guided)
+- [Lab autonomous](embedding-spaces-lab-autonomous)
 
 <a name='HPC'></a>
 #### Lesson 4
