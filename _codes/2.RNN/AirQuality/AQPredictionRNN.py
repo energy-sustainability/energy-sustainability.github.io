@@ -15,7 +15,6 @@ WindPrediction
 
 """
 
-from __future__ import print_function
 import numpy as np
 
 from keras.models import Sequential, load_model
@@ -31,7 +30,6 @@ import argparse
 from time import time
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 __author__ = 'bejar'
@@ -55,7 +53,6 @@ def load_config_file(nfile, abspath=False):
         s += l
 
     return json.loads(s)
-
 
 def lagged_vector(data, lag=1, ahead=0):
     """
@@ -122,7 +119,6 @@ def generate_dataset(config, ahead=1, data_path=None):
     """
     Generates the dataset for training, test and validation
 
-    :param lag: length of the lag window
     :param ahead: number of steps ahead for prediction
 
     :return:
@@ -151,7 +147,6 @@ def generate_dataset(config, ahead=1, data_path=None):
     # or a sequence of values
 
     raise NameError('ERROR: No such dataset type')
-
 
 
 def architecture(neurons, drop, nlayers, activation, activation_r, rnntype, impl=1):
@@ -185,13 +180,12 @@ if __name__ == '__main__':
     parser.add_argument('--config', default='config', help='Experiment configuration')
     parser.add_argument('--verbose', help="Verbose output (enables Keras verbose output)", action='store_true',
                         default=False)
-    parser.add_argument('--gpu', help="Use LSTM/GRU gpu implementation", action='store_true', default=False)
     parser.add_argument('--best', help="Save weights best in test", action='store_true', default=False)
     parser.add_argument('--tboard', help="Save log for tensorboard", action='store_true', default=False)
     args = parser.parse_args()
 
     verbose = 1 if args.verbose else 0
-    impl = 2 if args.gpu else 1  # implementation 0 is deprecated for newer tensorflow versions
+    impl = 2
 
     config = load_config_file(args.config)
     ############################################

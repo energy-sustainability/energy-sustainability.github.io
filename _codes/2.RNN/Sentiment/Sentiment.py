@@ -43,11 +43,10 @@ def tweet_to_words(raw_tweet):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--verbose', help="Verbose output (enables Keras verbose output)", action='store_true', default=False)
-    parser.add_argument('--gpu', help="Use LSTM/GRU gpu implementation", action='store_true', default=False)
     args = parser.parse_args()
 
     verbose = 1 if args.verbose else 0
-    impl = 2 if args.gpu else 0
+    impl = 2
 
     print("Starting:", time.ctime())
 
@@ -55,7 +54,7 @@ if __name__ == '__main__':
     # Data
 
     Tweet = pandas.read_csv("Airlines.csv")
-    Tweet = pandas.read_csv("Presidential.csv")
+#    Tweet = pandas.read_csv("Presidential.csv")
 
     # Pre-process the tweet and store in a separate column
     Tweet['clean_tweet'] = Tweet['text'].apply(lambda x: tweet_to_words(x))
@@ -69,7 +68,7 @@ if __name__ == '__main__':
     # Convert words to integers
     counts = Counter(words)
 
-    numwords = 5000  # Limit the number of words to use
+    numwords = 200  # Limit the number of words to use
     vocab = sorted(counts, key=counts.get, reverse=True)[:numwords]
     vocab_to_int = {word: ii for ii, word in enumerate(vocab, 1)}
 
@@ -117,11 +116,11 @@ if __name__ == '__main__':
     ############################################
     # Model
     drop = 0.0
-    nlayers = 2  # >= 1
+    nlayers = 1  # >= 1
     RNN = LSTM  # GRU
 
-    neurons = 128
-    embedding = 40
+    neurons = 64
+    embedding = 20
 
     model = Sequential()
     model.add(Embedding(numwords + 1, embedding, input_length=seq_len))
