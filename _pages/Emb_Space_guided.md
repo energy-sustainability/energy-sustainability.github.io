@@ -6,11 +6,11 @@ This page contains the guided laboratory of the Embedding Spaces topic for the D
 
 Table of Contents:
 
-- [Other sources for experimentation](#other)
-
----
-
----
+ # - [Other sources for experimentation](#other)
+ # 
+ # ---
+ # 
+ # ---
 
 The codes introduced in this guided lab can be found [here](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/3.Embeddings)
 
