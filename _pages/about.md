@@ -166,3 +166,7 @@ For the evaluation of the theoretical aspects of the course, we offer a list of 
 - [List of interesting papers with available code. Interesting for replicating their results and playing around on top.](https://github.com/zziz/pwc)
 - [A look at how many architectures and multimodalities are in fact the same basic operations: Feature-wise Linear Modulation or FiLM](https://distill.pub/2018/feature-wise-transformations/)
 - [Some details on the memory-related issues of Deep Learning](https://www.graphcore.ai/posts/why-is-so-much-memory-needed-for-deep-neural-networks)
+- [GAN lab: To play around with GANs playground style](https://poloclub.github.io/ganlab/)
+- [ILSVRC labeling game](https://cs.stanford.edu/people/karpathy/ilsvrc/)
+- [Visualizing Neural Network Layer Activation - Tensorflow tutorial](https://medium.com/@awjuliani/visualizing-neural-network-layer-activation-tensorflow-tutorial-d45f8bf7bbc4)
+- [MIT intro to deep learning](http://introtodeeplearning.com/)
