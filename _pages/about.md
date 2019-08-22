@@ -33,10 +33,15 @@ This is the official web page for the contents of the lectures from the Deep Lea
 
 <a name='lecturers'></a>
 ### Lecturers
-- Dario Garcia-Gasulla (Coordinator) (BSC, dario.garcia@bsc.es) (There are currently openings at <a href="http://hpai.bsc.es">HPAI-BSC</a>. Send me an email if you may be interested)
+- Dario Garcia-Gasulla (Course coordinator, BSC, dario.garcia@bsc.es) (There are currently openings at <a href="http://hpai.bsc.es">HPAI-BSC</a>. Send me an email if you may be interested)
 - Marc Casas (BSC, marc.casas@bsc.es)
 - Javier Bejar (UPC-CS, bejar@cs.upc.edu)
 
+### Before starting...
+
+This course provides access to supercomputing clusters to perform the labs. Before the first guided lab session, students must have familiarized with the environment by themselves. See this for a first set of instructions: 
+
+ALL STUDENTS must come to the first lab with a laptop able to connect to the cluster through ssh.
 
 
 <a name='structure'></a>
@@ -44,25 +49,28 @@ This is the official web page for the contents of the lectures from the Deep Lea
 
 This course provides an applied approach to Deep Learning. The course is structured in 4 thematic blocks, and each block as 3 parts: theory, guided laboratory and autonomous laboratory.
 
-<a name='calendar'></a>
-### Course Calendar for the Fall 2018-2019 semester
+The first and third thematic blocks (CNNs and Embeddings) are taught by Dario Garcia-Gasulla. The second (RNNs) by Javier Bejar. The fourth (HPC and DL) by Marc Casas. This implies that comments on each block should be addressed to the corresponding teacher. It also means that each block may have different methodologies.
 
-- 15/02/19	FNN-CNN Theory	
-- 22/02/19	FNN-CNN Guid. Lab	
-- 01/03/19	FNN-CNN Aut. Lab	
-- 08/03/19	RNN Theory	
-- 15/03/19	RNN Guid. Lab	
-- 22/03/19	RNN Aut. Lab	(Delivery 1st lab)
-- 29/03/19	Emb. Theory	
-- 05/04/19	Emb. Guid. Lab	
-- 12/04/19	Emb. Aut. Lab	(Delivery 2nd lab)
-- 26/04/19	HPC-DL Theory	
-- 10/05/19	HPC-DL Guid. Lab	(Delivery 3rd lab)	
-- 17/05/19	HPC-DL Aut. Lab	
-- 24/05/19	Presentation of theoretical works 1	
-- 31/05/19	Presentation of theoretical works 2	
-- 07/06/19	Presentation of theoretical works 3	(Delivery 4th lab)
-- 14/06/19	Presentation of theoretical works 4	
+<a name='calendar'></a>
+### Course Calendar for the Fall 2019-2020 semester
+
+- 12/09/19	FNN-CNN Theory	
+- 19/09/19	FNN-CNN Guid. Lab	
+- 26/09/19	FNN-CNN Aut. Lab	
+- 3/10/19	RNN Theory	
+- 10/10/19	RNN Guid. Lab	
+- 17/10/19	RNN Aut. Lab	(Delivery 1st lab)
+- 24/10/19	Emb. Theory	
+- 7/11/19	Emb. Guid. Lab	
+- 14/11/19	Emb. Aut. Lab	(Delivery 2nd lab)
+- 21/11/19	HPC-DL Theory	
+- 28/11/19	HPC-DL Guid. Lab	
+- 5/12/19	HPC-DL Aut. Lab	  (Delivery 3rd lab)	
+- 12/12/19	Presentation of theoretical works 1	
+- 19/12/19	Presentation of theoretical works 2
+- 26/12/19	(Delivery 4th lab)
+- ??/01/19	Presentation of theoretical works 3
+- ??/01/19	Presentation of theoretical works 4	
 
 
 
@@ -99,9 +107,21 @@ The course is evaluated 25% by theory comprehension and 75% by experimental work
 - Are there flaws in the paper methodology?
 - What future work can derive from this paper?
 
-The experimental evaluation will be based on reports written by the student for each thematic block, illustrating the conclusions derived from the autonomous laboratory sessions. Each thematic block will provide a list of analysis suggested to students. Alternative experimental reports suggested by the student are also acceptable, previous validation from the lecturers (e.g., replicating a particular paper results, or evaluating a different approach than the one suggested by the lecturers).
+The experimental evaluation will be based on reports for each thematic block, illustrating the conclusions derived from the laboratory sessions. Each thematic block will provide a list of analysis suggested to students. Alternative experimental reports suggested by the student are also acceptable, previous validation from the lecturers (e.g., replicating a particular paper results, or evaluating a different approach than the one suggested by the lecturers).
 
+#### FNN/CNN Evaluation
 
+The labs for these two blocks are to be performed in pairs. These can be the same for both blocks or not. The evaluation of the lab will be done in a 40 minutes personal interview between the lecturer (Dario Garcia-Gasulla in this case) and the two students. Both students will be evaluated separately. This interview will be in the form of an oral report: You are expected to explain the problem you faced and the solutions you proposed, while the lecturer asks questions about the particularities of the problem, and the reasoning behing your decisions.
+
+While most of the interview will be oral, you should bring a number of supporting material (digital format is fine). This must be restricted to figures, tables and plots (no text beyond the captions). Some of the most typical material are:
+
+- Dataset information: Size, splits, class distributions, dataset samples, technical properties
+- Training results: Loss and accuracy curves
+- Performance reports: Accuracies, confusion matrices
+
+However, some of these may be irrelevant, and some that are not listed here may be necessary, depending on your experiments/results. Feel free to bring any plot/table you find interesting for discussing.
+
+These personal interviews will be scheduled during the course.
 
 <a name='lessons'></a>
 ### Lessons
