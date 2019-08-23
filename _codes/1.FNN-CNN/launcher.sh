@@ -2,13 +2,15 @@
 
 #SBATCH --job-name="test_mnist"
 
+#SBATCH--partition=debug
+
 #SBATCH --workdir=.
 
-#SBATCH --output=mnist_%j.out
+#SBATCH --output=test_mnist_%j.out
 
-#SBATCH --error=mnist_%j.err
+#SBATCH --error=test_mnist_%j.err
 
-#SBATCH --ntasks=1
+#SBATCH --ntasks=4
 
 #SBATCH --gres gpu:1
 

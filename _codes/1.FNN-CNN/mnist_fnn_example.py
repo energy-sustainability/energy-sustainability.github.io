@@ -1,5 +1,6 @@
 from __future__ import division
 import keras
+import tensorflow as tf
 print( 'Using Keras version', keras.__version__)
 from keras.datasets import mnist
 #Load the MNIST dataset, already provided by Keras
@@ -28,25 +29,25 @@ y_test = np_utils.to_categorical(y_test, 10)
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 #Two hidden layers
-nn = Sequential()
-nn.add(Dense(64,activation='relu',input_shape=(784,)))
-nn.add(Dense(32,activation='relu'))
-nn.add(Dense(32,activation='relu'))
-nn.add(Dense(10, activation='softmax'))
+model = Sequential()
+model.add(Dense(64,activation='relu',input_shape=(784,)))
+model.add(Dense(32,activation='relu'))
+model.add(Dense(32,activation='relu'))
+model.add(Dense(10, activation=(tf.nn.softmax)))
 
 #Model visualization
 #We can plot the model by using the ```plot_model``` function. We need to install *pydot, graphviz and pydot-ng*.
 #from keras.util import plot_model
-#plot_model(nn, to_file='nn.png', show_shapes=true)
+#plot_model(model, to_file='model.png', show_shapes=true)
 
 #Compile the NN
-nn.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
+model.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #Start training
-history = nn.fit(x_train,y_train,batch_size=128,epochs=20)
+history = model.fit(x_train,y_train,batch_size=128,epochs=20)
 
 #Evaluate the model with test set
-score = nn.evaluate(x_test, y_test, verbose=0)
+score = model.evaluate(x_test, y_test, verbose=0)
 print('test loss:', score[0])
 print('test accuracy:', score[1])
 
@@ -74,7 +75,7 @@ plt.savefig('mnist_fnn_loss.pdf')
 from sklearn.metrics import classification_report,confusion_matrix
 import numpy as np
 #Compute probabilities
-Y_pred = nn.predict(x_test)
+Y_pred = model.predict(x_test)
 #Assign most probable label
 y_pred = np.argmax(Y_pred, axis=1)
 #Plot statistics
@@ -85,15 +86,15 @@ print(confusion_matrix(np.argmax(y_test,axis=1), y_pred))
 
 #Saving model and weights
 from keras.models import model_from_json
-nn_json = nn.to_json()
-with open('nn.json', 'w') as json_file:
-        json_file.write(nn_json)
+model_json = model.to_json()
+with open('model.json', 'w') as json_file:
+        json_file.write(model_json)
 weights_file = "weights-MNIST_"+str(score[1])+".hdf5"
-nn.save_weights(weights_file,overwrite=True)
+model.save_weights(weights_file,overwrite=True)
 
 #Loading model and weights
-json_file = open('nn.json','r')
-nn_json = json_file.read()
+json_file = open('model.json','r')
+model_json = json_file.read()
 json_file.close()
-nn = model_from_json(nn_json)
-nn.load_weights(weights_file)
+#model = model_from_json(model_json)
+model.load_weights(weights_file)
