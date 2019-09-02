@@ -93,8 +93,8 @@ weights_file = "weights-MNIST_"+str(score[1])+".hdf5"
 model.save_weights(weights_file,overwrite=True)
 
 #Loading model and weights
-json_file = open('model.json','r')
-model_json = json_file.read()
-json_file.close()
+#json_file = open('model.json','r')
+#model_json = json_file.read()
+#json_file.close()
 #model = model_from_json(model_json)
-model.load_weights(weights_file)
+#model.load_weights(weights_file)
