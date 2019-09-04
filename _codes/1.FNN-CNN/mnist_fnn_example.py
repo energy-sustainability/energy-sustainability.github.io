@@ -30,8 +30,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation
 #Two hidden layers
 model = Sequential()
-model.add(Dense(64,activation='relu',input_shape=(784,)))
-model.add(Dense(32,activation='relu'))
+model.add(Dense(16,activation='relu',input_shape=(784,)))
 model.add(Dense(32,activation='relu'))
 model.add(Dense(10, activation=(tf.nn.softmax)))
 
