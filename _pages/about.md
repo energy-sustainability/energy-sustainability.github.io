@@ -117,7 +117,7 @@ The labs for the first and third blocks are to be performed in couples. Students
 Feedforward Nets and Conv Nets (lecturer: Dario Garcia)
 - [Theory](mlp-convnets-theory/)
 - [Lab guided](mlp-convnets-lab-guided/)
-- [Lab autonomous](mlp-convnets-lab-guided/)
+- [Lab autonomous](mlp-convnets-lab-autonomous/)
 
 
 <a name='rnn_nets'></a>
