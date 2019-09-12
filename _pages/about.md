@@ -39,9 +39,7 @@ This is the official web page for the contents of the lectures from the Deep Lea
 
 ### Before starting...
 
-This course provides access to supercomputing clusters to perform the labs. Before the first guided lab session, students must have familiarized with the environment by themselves. See this for a first set of instructions: 
-
-ALL STUDENTS must come to the first lab with a laptop able to connect to the cluster through ssh.
+This course provides access to supercomputing clusters to perform the labs. Before the first guided lab session, students must have familiarized with the environment by themselves. Instructions on how to do that will be provided timely. ALL STUDENTS must come to the first lab with a laptop able to connect to the cluster through ssh. Linux is highly recommended.
 
 
 <a name='structure'></a>
@@ -49,7 +47,7 @@ ALL STUDENTS must come to the first lab with a laptop able to connect to the clu
 
 This course provides an applied approach to Deep Learning. The course is structured in 4 thematic blocks, and each block as 3 parts: theory, guided laboratory and autonomous laboratory.
 
-The first and third thematic blocks (CNNs and Embeddings) are taught by Dario Garcia-Gasulla. The second (RNNs) by Javier Bejar. The fourth (HPC and DL) by Marc Casas. This implies that comments on each block should be addressed to the corresponding teacher. It also means that each block may have different methodologies.
+The first and third thematic blocks (CNNs and Embeddings) are taught by Dario Garcia-Gasulla. The second (RNNs) by Javier Bejar. The fourth (HPC and DL) by Marc Casas. This implies that comments on each block should be addressed to the corresponding teacher. Each block may have different methodologies.
 
 <a name='calendar'></a>
 ### Course Calendar for the Fall 2019-2020 semester
@@ -89,9 +87,7 @@ The guided laboratory provides working code that can serve as a starting point f
 <a name='autonomous'></a>
 #### Autonomous Laboratory
 
-The autonomous laboratory session is intended for students to experiment with Deep Learning methods, and draw their own conclusions. On each autonomous laboratory, a set of example experiments will be detailed, but students are strongly encouraged to define their own experiments based on their own curiosity.
-
-For running the lab experiments, students will be given access to computational resources. However, these resources are shared with other people though a queue system. Its important to maxime the use of your resources, as the priority of your jobs will decrease as you consume your quota. Try to adjust the amount of resources you need for every job (both in number of nodes and in time). Plan your experiments in advance. Dont wait until 2 days before the delivery of the report to submit jobs, as these may be queued for a while.
+The autonomous laboratory session is intended for students to experiment with Deep Learning methods, and draw their own conclusions. It should also be used to obtain feedback from lecturers regarding the theoretical work in progress. For running their lab experiments, students will be given access to computational resources. However, these resources are shared with other people though a queue system. Its important to maxime the use of your resources, as the priority of your jobs will decrease as you consume your quota. Try to adjust the amount of resources you need for every job (both in number of nodes and in time). Plan your experiments in advance. Dont wait until 2 days before the delivery of the report to submit jobs, as these may be queued for a while.
 
 <a name='overlap'></a>
 ### Overlap with other courses
@@ -100,28 +96,18 @@ For some of the thematic blocks (specially the first one) there is a significant
 <a name='evaluation'></a>
 ### Course Evaluation
 
-The course is evaluated 25% by theory comprehension and 75% by experimental work. Theory comprehension is measured by an analysis on a paper chosen by the student. The student should read and fully understand the paper, reading as many references as needed for that purpose. A presentation will be done where the student will describe the paper itself, and provide constructive criticism on it. This may include, but is not limited to, answers to questions such as:
+The course is evaluated 25% by theory comprehension and 75% by experimental work. Theory comprehension is measured by an analysis on a paper chosen by the student and presented at the end of the semester. The student should read and fully understand the paper, reading as many references as needed for that purpose. A presentation will be done where the student will describe the paper itself, and provide constructive criticism on it. This may include, but is not limited to, answers to questions such as:
 
 - What is the main contribution of the article?
 - How could this paper be extended by more experiments or analysis?
 - Are there flaws in the paper methodology?
 - What future work can derive from this paper?
 
-The experimental evaluation will be based on reports for each thematic block, illustrating the conclusions derived from the laboratory sessions. Each thematic block will provide a list of analysis suggested to students. Alternative experimental reports suggested by the student are also acceptable, previous validation from the lecturers (e.g., replicating a particular paper results, or evaluating a different approach than the one suggested by the lecturers).
+The experimental evaluation will be based on reports for each thematic block, illustrating the conclusions derived from the laboratory sessions. Each thematic block will define the specifics of the experimental work. Alternative experimental reports suggested by the student are also acceptable, previous validation from the lecturers (e.g., replicating a particular paper results, or evaluating a different approach than the one suggested by the lecturers).
 
-#### FNN/CNN Evaluation
+#### FNN/CNN lab
 
-The labs for these two blocks are to be performed in pairs. These can be the same for both blocks or not. The evaluation of the lab will be done in a 40 minutes personal interview between the lecturer (Dario Garcia-Gasulla in this case) and the two students. Both students will be evaluated separately. This interview will be in the form of an oral report: You are expected to explain the problem you faced and the solutions you proposed, while the lecturer asks questions about the particularities of the problem, and the reasoning behing your decisions.
-
-While most of the interview will be oral, you should bring a number of supporting material (digital format is fine). This must be restricted to figures, tables and plots (no text beyond the captions). Some of the most typical material are:
-
-- Dataset information: Size, splits, class distributions, dataset samples, technical properties
-- Training results: Loss and accuracy curves
-- Performance reports: Accuracies, confusion matrices
-
-However, some of these may be irrelevant, and some that are not listed here may be necessary, depending on your experiments/results. Feel free to bring any plot/table you find interesting for discussing.
-
-These personal interviews will be scheduled during the course.
+The labs for these two blocks are to be performed in couples. Students are free to arrange couples as they see fit. Partners can be the same for both blocks or not. The evaluation of the lab will be done in a 40 minutes personal interview between the lecturer (Dario Garcia-Gasulla in this case) and the two students. Both students will be evaluated separately. This interview will be in the form of an oral report: You are expected to explain the problem you faced and the solutions you proposed, while the lecturer asks questions about the particularities of the problem, and the reasoning behing your decisions. While most of the interview will be oral, you should bring a number of supporting material (digital format is fine). These personal interviews will be scheduled during the course.
 
 <a name='lessons'></a>
 ### Lessons
