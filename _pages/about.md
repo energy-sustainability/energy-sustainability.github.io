@@ -105,9 +105,9 @@ The course is evaluated 25% by theory comprehension and 75% by experimental work
 
 The experimental evaluation will be based on reports for each thematic block, illustrating the conclusions derived from the laboratory sessions. Each thematic block will define the specifics of the experimental work. Alternative experimental reports suggested by the student are also acceptable, previous validation from the lecturers (e.g., replicating a particular paper results, or evaluating a different approach than the one suggested by the lecturers).
 
-#### FNN/CNN lab
+#### FNN-CNN / Embeddings lab
 
-The labs for these two blocks are to be performed in couples. Students are free to arrange couples as they see fit. Partners can be the same for both blocks or not. The evaluation of the lab will be done in a 40 minutes personal interview between the lecturer (Dario Garcia-Gasulla in this case) and the two students. Both students will be evaluated separately. This interview will be in the form of an oral report: You are expected to explain the problem you faced and the solutions you proposed, while the lecturer asks questions about the particularities of the problem, and the reasoning behing your decisions. While most of the interview will be oral, you should bring a number of supporting material (digital format is fine). These personal interviews will be scheduled during the course.
+The labs for the first and third blocks are to be performed in couples. Students are free to arrange couples as they see fit. Partners can be the same for both blocks or not. The evaluation of the lab will be done in a 40 minutes personal interview between the lecturer (Dario Garcia-Gasulla in this case) and the two students. Both students will be evaluated separately. This interview will be in the form of an oral report: You are expected to explain the problem you faced and the solutions you proposed, while the lecturer asks questions about the particularities of the problem, and the reasoning behing your decisions. While most of the interview will be oral, you should bring a number of supporting material (digital format is fine). These personal interviews will be scheduled during the course.
 
 <a name='lessons'></a>
 ### Lessons
