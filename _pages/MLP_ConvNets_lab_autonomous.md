@@ -3,6 +3,7 @@ permalink: /mlp-convnets-lab-autonomous/
 ---
 
 The autonomous lab is described in the following slides:
+
 *  [Slides](http://upc-mai-dl.github.io/files/1.3-FNN_CNN_Autonomous lab.pdf).
 
 #The autonomous laboratory is open for your exploration. Using the basic code provided in the guided laboratory, students should modify it to test different settings, and understand the effect of the various components. You could use any dataset you wish. The list of datasets available at Keras can be found [here](https://keras.io/datasets/), but using one of those is not a requirement (dont use too simple datasets like MNIST). You can also use any framework you wish, train model you can find, or online dataset. In the end you must submit an 8 pages PDF document (references not included) with your work. Minimum font size of 11. In general, its better to focus in one aspect and to study it thoroughly, than to do small experiments on different topics without going any deep.
