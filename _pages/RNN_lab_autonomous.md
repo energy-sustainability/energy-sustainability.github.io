@@ -4,14 +4,24 @@ permalink: /rnn-lab-autonomous/
 
 ## Recurrent Neural Networks (Autonomous Laboratory)
 
+This assignment is to be **solved in pairs**. You can repeat the partner from the previous 
+assignment or change it if you prefer.
+
 The autonomous laboratory is open for your exploration. Using the basic code provided in the guided laboratory, 
 you should modify it to test different settings, and to understand the effect of the various components. 
 
 
 You could use any dataset you wish as long as it is a problem that involves sequential data (e.g. time series, music, 
-trajectories, text...).  
+trajectories, text...). 
+
+**You will have to inform me of the dataset you chosed as soon as possible, no repeated datasets
+ are allowed**. Send me an email with your choice (bejar@cs.upc.edu)
+
+  
 At the end of this page you have a list of possible 
-datasets and datasources. Using one of those is not a requirement, but don't use a dataset that is too simple. 
+datasets and datasources. Using one of those is not a requirement, but **don't use a dataset** that is too simple or that has 
+been used on tensorflow, keras, pytorch, CNTK demos. 
+
 
 You can also use any framework you wish, train model you can find, or online dataset. 
 
