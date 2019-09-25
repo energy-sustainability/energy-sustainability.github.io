@@ -25,7 +25,7 @@ been used on tensorflow, keras, pytorch, CNTK demos.
 
 You can also use any framework you wish, train model you can find, or online dataset. 
 
-In the end you must upload to the *raco* a report 8-10 pages long as a PDF document (references not included) with your work. 
+In the end you must upload to the *raco* a report around 10-12 pages long as a PDF document (references not included) with your work. 
 Minimum font size of 11. 
 
 In general, it is better to focus in one aspect and to study it thoroughly, than to do small experiments 
