@@ -2,7 +2,7 @@
 
 #SBATCH --job-name="test_mnist"
 
-#SBATCH--partition=debug
+#SBATCH --qos=debug
 
 #SBATCH --workdir=.
 
