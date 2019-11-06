@@ -4,6 +4,15 @@ permalink: /embedding-spaces-lab-guided/
 
 This page contains the guided laboratory of the Embedding Spaces topic for the Deep Learning course at the Master in Artificial Inteligence of the Universitat Politècnica de Catalunya.
 
+The slides used in the class are the following:
+
+*  [Slides](http://upc-mai-dl.github.io/files/2.2-Emb_Guided lab.pdf).
+
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+WARNING: What follows is content from old versions of this course. Its here because it contains interesting links.
+
 The codes introduced in this guided lab can be found [here](https://github.com/UPC-MAI-DL/UPC-MAI-DL.github.io/tree/master/_codes/3.Embeddings)
 
 Some necessary resources are found within gpfs. This must be copied to your local .keras/models folder. Their location is:
