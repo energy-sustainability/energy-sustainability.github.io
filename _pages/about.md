@@ -20,7 +20,7 @@ The Table of Contents:
 - [Lessons](#lessons)
     - [#1 Feedforward Nets and Conv Nets](#mlp_convnets)
     - [#2 Recurrent Neural Nets](#rnn_nets)
-    - [#3 Embedding spaces](#embeddings)
+    - [#3 Transfer Learning and Embedding spaces](#embeddings)
     - [#4 High Performance Computing Aspects of Deep Learning](#HPC) 
 - [Code and Lab Resources](#code)
 - [Papers of interest](#papers)
@@ -47,28 +47,28 @@ This course provides access to supercomputing clusters to perform the labs. Befo
 
 This course provides an applied approach to Deep Learning. The course is structured in 4 thematic blocks, and each block as 3 parts: theory, guided laboratory and autonomous laboratory.
 
-The first and third thematic blocks (CNNs and Embeddings) are taught by Dario Garcia-Gasulla. The second (RNNs) by Javier Bejar. The fourth (HPC and DL) by Marc Casas. This implies that comments on each block should be addressed to the corresponding teacher. Each block may have different methodologies.
+The first and third thematic blocks (CNNs and Transfer Learning & Embeddings) are taught by Dario Garcia-Gasulla. The second (RNNs) by Javier Bejar. The fourth (HPC and DL) by Marc Casas. This implies that comments on each block should be addressed to the corresponding teacher. Each block may have different methodologies.
 
 <a name='calendar'></a>
 ### Course Calendar for the Fall 2019-2020 semester
 
-- 12/09/19	FNN-CNN Theory	
-- 19/09/19	FNN-CNN Guid. Lab	
-- 26/09/19	FNN-CNN Aut. Lab	
-- 3/10/19	RNN Theory	
-- 10/10/19	RNN Guid. Lab	
-- 17/10/19	RNN Aut. Lab	(Delivery 1st lab)
-- 24/10/19	Emb. Theory	
-- 7/11/19	Emb. Guid. Lab	
-- 14/11/19	Emb. Aut. Lab	(Delivery 2nd lab)
-- 21/11/19	HPC-DL Theory	
-- 28/11/19	HPC-DL Guid. Lab	
-- 5/12/19	HPC-DL Aut. Lab	  (Delivery 3rd lab)	
-- 12/12/19	Presentation of theoretical works 1	
-- 19/12/19	Presentation of theoretical works 2
-- 26/12/19	(Delivery 4th lab)
-- ??/01/19	Presentation of theoretical works 3
-- ??/01/19	Presentation of theoretical works 4	
+- //20	FNN-CNN Theory	
+- //20	FNN-CNN Guid. Lab	
+- //20	FNN-CNN Aut. Lab	
+- //20  RNN Theory	
+- //20	RNN Guid. Lab	
+- //20	RNN Aut. Lab	(Delivery 1st lab)
+- //20	Emb. Theory	
+- //20  Emb. Guid. Lab	
+- //20	Emb. Aut. Lab	(Delivery 2nd lab)
+- //20	HPC-DL Theory	
+- //20	HPC-DL Guid. Lab	
+- //20  HPC-DL Aut. Lab	  (Delivery 3rd lab)	
+- //20	Presentation of theoretical works 1	
+- //20	Presentation of theoretical works 2
+- //20	(Delivery 4th lab)
+- //20	Presentation of theoretical works 3
+- //20	Presentation of theoretical works 4	
 
 
 
