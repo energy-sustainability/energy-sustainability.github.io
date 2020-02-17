@@ -50,25 +50,25 @@ This course provides an applied approach to Deep Learning. The course is structu
 The first and third thematic blocks (CNNs and Transfer Learning & Embeddings) are taught by Dario Garcia-Gasulla. The second (RNNs) by Javier Bejar. The fourth (HPC and DL) by Marc Casas. This implies that comments on each block should be addressed to the corresponding teacher. Each block may have different methodologies.
 
 <a name='calendar'></a>
-### Course Calendar for the Fall 2019-2020 semester
+### Course Calendar for the Spring 2019-2020 semester
 
-- //20	FNN-CNN Theory	
-- //20	FNN-CNN Guid. Lab	
-- //20	FNN-CNN Aut. Lab	
-- //20  RNN Theory	
-- //20	RNN Guid. Lab	
-- //20	RNN Aut. Lab	(Delivery 1st lab)
-- //20	Emb. Theory	
-- //20  Emb. Guid. Lab	
-- //20	Emb. Aut. Lab	(Delivery 2nd lab)
-- //20	HPC-DL Theory	
-- //20	HPC-DL Guid. Lab	
-- //20  HPC-DL Aut. Lab	  (Delivery 3rd lab)	
-- //20	Presentation of theoretical works 1	
-- //20	Presentation of theoretical works 2
-- //20	(Delivery 4th lab)
-- //20	Presentation of theoretical works 3
-- //20	Presentation of theoretical works 4	
+- 13/02/20	FNN-CNN Theory	
+- 20/02/20	FNN-CNN Guid. Lab	
+- 27/02/20	FNN-CNN Aut. Lab	
+- 05/03/20  	RNN Theory	
+- 12/03/20	RNN Guid. Lab	
+- 19/03/20	RNN Aut. Lab	(Delivery 1st lab)
+- 26/03/20	Emb. Theory	
+- 02/04/20  	Emb. Guid. Lab	
+- 16/04/20	Emb. Aut. Lab	(Delivery 2nd lab)
+- 23/04/20	HPC-DL Theory	
+- 30/04/20	HPC-DL Guid. Lab	
+- 07/05/20	NO CLASS (change of schedule) (Delivery 3rd lab)	
+- 14/05/20  	HPC-DL Aut. Lab	  
+- 21/05/20	Presentation of theoretical works 1	
+- 28/05/20	Presentation of theoretical works 2 (Delivery 4th lab)
+- 04/06/20	Presentation of theoretical works 3
+- 11/06/20	Presentation of theoretical works 4	
 
 
 
@@ -105,7 +105,7 @@ The course is evaluated 25% by theory comprehension and 75% by experimental work
 
 The experimental evaluation will be based on reports for each thematic block, illustrating the conclusions derived from the laboratory sessions. Each thematic block will define the specifics of the experimental work. Alternative experimental reports suggested by the student are also acceptable, previous validation from the lecturers (e.g., replicating a particular paper results, or evaluating a different approach than the one suggested by the lecturers).
 
-#### FNN-CNN / Embeddings lab
+#### FNN-CNN / Transfer Learning & Embeddings lab
 
 The labs for the first and third blocks are to be performed in couples. Students are free to arrange couples as they see fit. Partners can be the same for both blocks or not. The evaluation of the lab will be done in a 40 minutes personal interview between the lecturer (Dario Garcia-Gasulla in this case) and the two students. Both students will be evaluated separately. This interview will be in the form of an oral report: You are expected to explain the problem you faced and the solutions you proposed, while the lecturer asks questions about the particularities of the problem, and the reasoning behing your decisions. While most of the interview will be oral, you should bring a number of supporting material (digital format is fine). These personal interviews will be scheduled during the course.
 
@@ -131,7 +131,7 @@ Recurrent Neural Networks (lecturer: Javier Bejar)
 
 <a name='embeddings'></a>
 #### Lesson 3
-Embedding spaces (lecturer: Dario Garcia)
+Transfer Learning & Embeddings (lecturer: Dario Garcia)
 
 - [Theory](emb-space-theory)
 - [Lab guided](embedding-spaces-lab-guided)
