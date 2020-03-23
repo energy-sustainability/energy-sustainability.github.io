@@ -131,7 +131,7 @@ Recurrent Neural Networks (lecturer: Javier Bejar)
 
 <a name='embeddings'></a>
 #### Lesson 3
-Transfer Learning & Embeddings (lecturer: Dario Garcia)
+Embeddings & Transfer Learning (lecturer: Dario Garcia)
 
 - [Theory](emb-space-theory)
 - [Lab guided](embedding-spaces-lab-guided)
