@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     # Define data splits
     #Train set
-    train_path = '/gpfs/scratch/bsc28/hpai/storage/data/datasets/original/mit67/train/'
+    train_path = '/gpfs/projects/bsc28/hpai/storage/data/datasets/original/mit67/train/'
     train_images = []
     train_labels = []
     #Use a subset of classes to speed up the process. -1 uses all classes.
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         if num_classes==0:
             break
     #Test set
-    test_path = '/gpfs/scratch/bsc28/hpai/storage/data/datasets/original/mit67/test/'
+    test_path = '/gpfs/projects/bsc28/hpai/storage/data/datasets/original/mit67/test/'
     test_images = []
     test_labels = []
     num_classes = 3
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     print('Total test images:',len(test_images),' with their corresponding',len(test_labels),'labels')
 
     #Parameters for the extraction procedure
-    batch_size = 64
+    batch_size = 128
     input_reshape = (224, 224)
     # Call FNE method on the train set
     fne_features, fne_stats_train = full_network_embedding(graph_d, train_images, batch_size, input_tensor, target_tensors, input_reshape)
