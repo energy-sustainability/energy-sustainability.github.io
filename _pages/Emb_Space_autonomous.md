@@ -6,7 +6,7 @@ This page contains the guided laboratory of the Embedding Spaces topic for the D
 
 The slides used in the class are the following:
 
-*  [Slides](http://upc-mai-dl.github.io/files/2.3-Embeddings_Autonomous lab.pdf)
+*  [Slides](http://upc-mai-dl.github.io/files/2.3-Emb_and_TL_Autonomous lab_COVID.pdf)
 
 -------------------------------------------------
 -------------------------------------------------
